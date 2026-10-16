@@ -315,7 +315,6 @@ Orion includes several security mechanisms:
 - Back up persistent workspace data before deployment changes.
 - Review exported CSV files before sharing them.
 
-See [SECURITY.md](SECURITY.md) for the security policy.
 
 ---
 
