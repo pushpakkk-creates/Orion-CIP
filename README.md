@@ -449,11 +449,5 @@ Potential areas for further development include:
 
 ---
 
-## License
-
-See [LICENSE](LICENSE) for the terms governing the use and distribution of this project.
-
----
-
 **Orion — Customer Intelligence Platform**  
 *Turning customer data into actionable intelligence.*
