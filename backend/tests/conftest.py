@@ -1,0 +1,100 @@
+"""
+Test fixtures for Orion — Customer Intelligence Platform backend.
+
+Provides full database isolation using temp directories so tests
+never touch production data/ files.
+"""
+
+import pytest
+import pytest_asyncio
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+ADMIN_HEADERS = {"X-Admin-Token": "test-admin-token"}
+
+
+@pytest.fixture(scope="session")
+def test_data_dir(tmp_path_factory):
+    """Create an isolated temp directory and monkeypatch all DB paths."""
+    tmp = tmp_path_factory.mktemp("orion_test")
+    ws_dir = tmp / "workspaces"
+    ws_dir.mkdir()
+
+    # -- Patch database.py paths --
+    import app.db.database as db_mod
+
+    test_db_path = str(tmp / "orion.db")
+    test_db_url = f"sqlite:///{test_db_path}"
+    test_engine = create_engine(test_db_url, echo=False)
+    test_session_local = sessionmaker(bind=test_engine)
+
+    db_mod.DATABASE_PATH = test_db_path
+    db_mod.DATABASE_URL = test_db_url
+    db_mod.engine = test_engine
+    db_mod.SessionLocal = test_session_local
+
+    # -- Patch workspace_db.py paths --
+    import app.db.workspace_db as ws_mod
+
+    test_meta_path = tmp / "workspaces.db"
+    test_meta_engine = create_engine(f"sqlite:///{test_meta_path}", echo=False)
+    test_meta_session = sessionmaker(bind=test_meta_engine)
+
+    ws_mod.DATA_DIR = tmp
+    ws_mod.WORKSPACES_DIR = ws_dir
+    ws_mod.METADATA_DB_PATH = test_meta_path
+    ws_mod.metadata_engine = test_meta_engine
+    ws_mod.MetadataSession = test_meta_session
+
+    return tmp
+
+
+@pytest.fixture(scope="session")
+def test_app(test_data_dir):
+    """Import the FastAPI app after DB isolation is in place."""
+    from app.db.database import Base, engine
+    from app.db.workspace_db import WorkspaceBase, metadata_engine
+    from app.config import settings
+
+    settings.admin_api_token = "test-admin-token"
+
+    import app.models  # noqa: F401
+    Base.metadata.create_all(bind=engine)
+    WorkspaceBase.metadata.create_all(bind=metadata_engine)
+
+    from app.main import app
+    return app
+
+
+@pytest_asyncio.fixture
+async def client(test_app):
+    """Async HTTP client wired to the test app."""
+    import httpx
+
+    transport = httpx.ASGITransport(app=test_app)
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as c:
+        yield c
+
+
+@pytest.fixture
+def admin_headers():
+    """Headers for test admin workspace-management requests."""
+    return dict(ADMIN_HEADERS)
+
+
+@pytest.fixture(autouse=True)
+def clean_workspaces(test_app):
+    """Keep the shared metadata DB isolated between tests."""
+    from app.services.owner_access import clear_owner_access
+    from app.services.workspace_manager import delete_workspace, list_all_workspace_records
+    from app.services.workspace_generator import reset_generation_registry
+
+    reset_generation_registry()
+    clear_owner_access()
+    for ws in list_all_workspace_records():
+        delete_workspace(ws.id)
+    yield
+    reset_generation_registry()
+    clear_owner_access()
+    for ws in list_all_workspace_records():
+        delete_workspace(ws.id)

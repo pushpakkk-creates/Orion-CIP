@@ -1,0 +1,351 @@
+customer_id,name,email,company,industry,company_size,plan_tier,signup_date,region,acquisition_channel,is_churned,churned_date
+ORI350-00001,Prisha Mehta,prisha.mehta.ori350.1@example.com,Indus Analytics,Logistics,startup,enterprise,2025-01-07,"Indore, Madhya Pradesh, India",Email Campaign,1,2026-05-27
+ORI350-00002,Krishna Saxena,krishna.saxena.ori350.2@example.com,CoralBridge Networks,Education,mid_market,starter,2022-12-20,"Noida, Uttar Pradesh, India",Referral,0,
+ORI350-00003,Avni Bansal,avni.bansal.ori350.3@example.com,Nexa Bharat,Technology,startup,growth,2024-05-02,"Bhopal, Madhya Pradesh, India",Referral,0,
+ORI350-00004,Kunal Saxena,kunal.saxena.ori350.4@example.com,Udaan Technologies,Media,smb,growth,2025-02-02,"Surat, Gujarat, India",LinkedIn,0,
+ORI350-00005,Atharv Shah,atharv.shah.ori350.5@example.com,Sahyadri Retail,Technology,mid_market,growth,2021-05-25,"Hyderabad, Telangana, India",LinkedIn,0,
+ORI350-00006,Avni Sethi,avni.sethi.ori350.6@example.com,Nexa Bharat,Logistics,mid_market,growth,2025-08-04,"Bhopal, Madhya Pradesh, India",Partner,0,
+ORI350-00007,Ananya Patil,ananya.patil.ori350.7@example.com,Sahyadri Retail,Healthcare,smb,growth,2021-04-22,"Ahmedabad, Gujarat, India",Website,0,
+ORI350-00008,Yash Khan,yash.khan.ori350.8@example.com,Asterline Systems,Manufacturing,startup,growth,2026-08-13,"Hyderabad, Telangana, India",LinkedIn,0,
+ORI350-00009,Diya Gupta,diya.gupta.ori350.9@example.com,Bharat Cloudworks,Finance,startup,starter,2021-01-15,"Bengaluru, Karnataka, India",Sales Team,0,
+ORI350-00010,Pooja Kulkarni,pooja.kulkarni.ori350.10@example.com,Kaveri Commerce,Logistics,mid_market,growth,2023-03-16,"Mumbai, Maharashtra, India",Mobile App,0,
+ORI350-00011,Saanvi Kulkarni,saanvi.kulkarni.ori350.11@example.com,Udaan Technologies,Media,smb,starter,2021-04-23,"Nashik, Maharashtra, India",Sales Team,0,
+ORI350-00012,Kavya Thakur,kavya.thakur.ori350.12@example.com,Lotus Health Network,Education,startup,growth,2024-10-08,"Bhopal, Madhya Pradesh, India",Partner,0,
+ORI350-00013,Myra Khan,myra.khan.ori350.13@example.com,Nexa Bharat,Technology,smb,growth,2021-07-08,"Chandigarh, Chandigarh, India",LinkedIn,0,
+ORI350-00014,Myra Kulkarni,myra.kulkarni.ori350.14@example.com,Indus Analytics,Media,smb,starter,2025-06-03,"Delhi, Delhi, India",Referral,0,
+ORI350-00015,Avni Saxena,avni.saxena.ori350.15@example.com,Aarohan Digital,Healthcare,enterprise,growth,2021-09-27,"Hyderabad, Telangana, India",Sales Team,0,
+ORI350-00016,Aditi Shaikh,aditi.shaikh.ori350.16@example.com,Bharat Cloudworks,Manufacturing,smb,starter,2024-07-27,"Nashik, Maharashtra, India",Email Campaign,0,
+ORI350-00017,Ishita Mukherjee,ishita.mukherjee.ori350.17@example.com,Udaan Technologies,Logistics,enterprise,starter,2025-02-07,"Kolkata, West Bengal, India",LinkedIn,0,
+ORI350-00018,Ishaan Bansal,ishaan.bansal.ori350.18@example.com,Indus Analytics,Technology,smb,starter,2023-03-07,"Visakhapatnam, Andhra Pradesh, India",Email Campaign,1,2025-09-05
+ORI350-00019,Nandini Naidu,nandini.naidu.ori350.19@example.com,Monsoon Media,Healthcare,startup,growth,2024-03-02,"Noida, Uttar Pradesh, India",Referral,0,
+ORI350-00020,Sneha Gupta,sneha.gupta.ori350.20@example.com,Udaan Technologies,Education,enterprise,growth,2023-08-08,"Chennai, Tamil Nadu, India",Referral,0,
+ORI350-00021,Avni Khan,avni.khan.ori350.21@example.com,Narmada Manufacturing,Media,mid_market,growth,2025-01-24,"Chandigarh, Chandigarh, India",Referral,0,
+ORI350-00022,Pooja Chawla,pooja.chawla.ori350.22@example.com,Kaveri Commerce,Media,smb,growth,2021-07-03,"Bhopal, Madhya Pradesh, India",Sales Team,0,
+ORI350-00023,Kabir Iyer,kabir.iyer.ori350.23@example.com,BlueKite Systems,Logistics,smb,growth,2026-06-30,"Indore, Madhya Pradesh, India",Referral,0,
+ORI350-00024,Reyansh Mishra,reyansh.mishra.ori350.24@example.com,Sahyadri Retail,Logistics,smb,starter,2026-05-22,"Kolkata, West Bengal, India",Partner,0,
+ORI350-00025,Riya Joshi,riya.joshi.ori350.25@example.com,Triveni Solutions,Technology,mid_market,growth,2021-08-28,"Chandigarh, Chandigarh, India",LinkedIn,0,
+ORI350-00026,Myra Banerjee,myra.banerjee.ori350.26@example.com,BlueKite Systems,Media,smb,starter,2025-06-29,"Jaipur, Rajasthan, India",Sales Team,0,
+ORI350-00027,Sneha Sharma,sneha.sharma.ori350.27@example.com,Pioneer Infotech,Media,startup,growth,2021-12-05,"Indore, Madhya Pradesh, India",Partner,1,2026-05-16
+ORI350-00028,Siddharth Rao,siddharth.rao.ori350.28@example.com,Monsoon Media,Logistics,smb,growth,2026-04-01,"Nagpur, Maharashtra, India",Referral,0,
+ORI350-00029,Tanvi Iyer,tanvi.iyer.ori350.29@example.com,Pioneer Infotech,Retail,mid_market,growth,2021-07-12,"Bhopal, Madhya Pradesh, India",Mobile App,0,
+ORI350-00030,Aarav Nair,aarav.nair.ori350.30@example.com,Indus Analytics,Education,mid_market,growth,2022-09-07,"Bhopal, Madhya Pradesh, India",Sales Team,0,
+ORI350-00031,Shaurya Shah,shaurya.shah.ori350.31@example.com,Narmada Manufacturing,Finance,mid_market,growth,2022-01-09,"Hyderabad, Telangana, India",Sales Team,0,
+ORI350-00032,Tanvi Shah,tanvi.shah.ori350.32@example.com,Narmada Manufacturing,Media,mid_market,starter,2021-01-25,"Delhi, Delhi, India",Sales Team,0,
+ORI350-00033,Myra Malhotra,myra.malhotra.ori350.33@example.com,MangoTree Services,Logistics,smb,starter,2021-12-15,"Surat, Gujarat, India",Partner,0,
+ORI350-00034,Atharv Malhotra,atharv.malhotra.ori350.34@example.com,Bharat Cloudworks,Finance,mid_market,growth,2023-03-07,"Jaipur, Rajasthan, India",Website,0,
+ORI350-00035,Aditya Saxena,aditya.saxena.ori350.35@example.com,Vistaar Consulting,Media,enterprise,growth,2023-09-04,"Visakhapatnam, Andhra Pradesh, India",Email Campaign,0,
+ORI350-00036,Yash Mukherjee,yash.mukherjee.ori350.36@example.com,Kaveri Commerce,Media,smb,starter,2022-03-30,"Chandigarh, Chandigarh, India",Partner,0,
+ORI350-00037,Zoya Kaur,zoya.kaur.ori350.37@example.com,Pioneer Infotech,Education,smb,enterprise,2025-09-08,"Nashik, Maharashtra, India",Sales Team,0,
+ORI350-00038,Vihaan More,vihaan.more.ori350.38@example.com,Monsoon Media,Finance,mid_market,growth,2025-04-08,"Ahmedabad, Gujarat, India",LinkedIn,1,2026-07-18
+ORI350-00039,Siddharth Nair,siddharth.nair.ori350.39@example.com,Bharat Cloudworks,Education,startup,starter,2023-08-10,"Noida, Uttar Pradesh, India",Website,1,2026-05-21
+ORI350-00040,Aditya Kapoor,aditya.kapoor.ori350.40@example.com,CoralBridge Networks,Finance,smb,growth,2023-01-15,"Pune, Maharashtra, India",Partner,1,2025-11-07
+ORI350-00041,Siddharth Patil,siddharth.patil.ori350.41@example.com,Deccan Logistics,Manufacturing,smb,growth,2026-02-28,"Nagpur, Maharashtra, India",Referral,0,
+ORI350-00042,Aadhya Shetty,aadhya.shetty.ori350.42@example.com,Triveni Solutions,Education,mid_market,growth,2022-02-08,"Nagpur, Maharashtra, India",Referral,0,
+ORI350-00043,Atharv Menon,atharv.menon.ori350.43@example.com,Lotus Health Network,Retail,smb,growth,2024-11-23,"Hyderabad, Telangana, India",Sales Team,1,2025-08-19
+ORI350-00044,Nandini Malhotra,nandini.malhotra.ori350.44@example.com,Lotus Health Network,Retail,enterprise,growth,2021-08-26,"Hyderabad, Telangana, India",Website,1,2026-08-27
+ORI350-00045,Vivaan Banerjee,vivaan.banerjee.ori350.45@example.com,Sahyadri Retail,Technology,startup,growth,2023-09-13,"Chandigarh, Chandigarh, India",LinkedIn,0,
+ORI350-00046,Kunal Shaikh,kunal.shaikh.ori350.46@example.com,Monsoon Media,Manufacturing,mid_market,growth,2025-09-15,"Chennai, Tamil Nadu, India",Partner,0,
+ORI350-00047,Sai Iyer,sai.iyer.ori350.47@example.com,Lotus Health Network,Retail,smb,growth,2023-10-13,"Visakhapatnam, Andhra Pradesh, India",Mobile App,0,
+ORI350-00048,Aarav Naidu,aarav.naidu.ori350.48@example.com,CoralBridge Networks,Healthcare,enterprise,growth,2021-09-23,"Noida, Uttar Pradesh, India",Sales Team,0,
+ORI350-00049,Zoya Gupta,zoya.gupta.ori350.49@example.com,Kaveri Commerce,Finance,smb,starter,2022-01-21,"Kolkata, West Bengal, India",Website,0,
+ORI350-00050,Meera Malhotra,meera.malhotra.ori350.50@example.com,Sahyadri Retail,Media,mid_market,growth,2021-07-22,"Coimbatore, Tamil Nadu, India",LinkedIn,0,
+ORI350-00051,Ananya Kaur,ananya.kaur.ori350.51@example.com,Bharat Cloudworks,Healthcare,smb,growth,2023-05-19,"Kochi, Kerala, India",Website,0,
+ORI350-00052,Ira Mukherjee,ira.mukherjee.ori350.52@example.com,Udaan Technologies,Manufacturing,smb,growth,2021-03-04,"Ahmedabad, Gujarat, India",Sales Team,0,
+ORI350-00053,Neha More,neha.more.ori350.53@example.com,Deccan Logistics,Media,smb,growth,2024-07-20,"Ahmedabad, Gujarat, India",Mobile App,0,
+ORI350-00054,Dhruv Joshi,dhruv.joshi.ori350.54@example.com,Udaan Technologies,Manufacturing,mid_market,starter,2026-09-18,"Noida, Uttar Pradesh, India",Referral,1,2026-05-19
+ORI350-00055,Sai Patil,sai.patil.ori350.55@example.com,Vistaar Consulting,Media,enterprise,growth,2026-09-15,"Pune, Maharashtra, India",Partner,1,2026-08-06
+ORI350-00056,Diya Deshmukh,diya.deshmukh.ori350.56@example.com,Pioneer Infotech,Education,mid_market,growth,2021-05-08,"Ahmedabad, Gujarat, India",Referral,1,2025-11-26
+ORI350-00057,Ananya Ansari,ananya.ansari.ori350.57@example.com,MangoTree Services,Technology,startup,enterprise,2021-07-11,"Noida, Uttar Pradesh, India",Mobile App,0,
+ORI350-00058,Myra More,myra.more.ori350.58@example.com,MangoTree Services,Retail,enterprise,growth,2024-11-24,"Hyderabad, Telangana, India",Sales Team,0,
+ORI350-00059,Tanvi Naidu,tanvi.naidu.ori350.59@example.com,Asterline Systems,Finance,mid_market,starter,2022-12-08,"Chandigarh, Chandigarh, India",Mobile App,1,2025-09-26
+ORI350-00060,Siddharth Rao,siddharth.rao.ori350.60@example.com,CoralBridge Networks,Media,smb,growth,2022-06-26,"Coimbatore, Tamil Nadu, India",Email Campaign,0,
+ORI350-00061,Riya Khan,riya.khan.ori350.61@example.com,Indus Analytics,Finance,startup,growth,2025-03-25,"Bhopal, Madhya Pradesh, India",Partner,0,
+ORI350-00062,Riya Das,riya.das.ori350.62@example.com,Monsoon Media,Technology,startup,growth,2021-09-19,"Chennai, Tamil Nadu, India",Website,0,
+ORI350-00063,Vihaan Chawla,vihaan.chawla.ori350.63@example.com,Narmada Manufacturing,Media,startup,growth,2024-02-23,"Chennai, Tamil Nadu, India",Email Campaign,0,
+ORI350-00064,Diya Deshmukh,diya.deshmukh.ori350.64@example.com,CoralBridge Networks,Logistics,startup,growth,2022-06-30,"Nashik, Maharashtra, India",LinkedIn,0,
+ORI350-00065,Avni Bansal,avni.bansal.ori350.65@example.com,Bharat Cloudworks,Media,smb,enterprise,2022-05-18,"Nagpur, Maharashtra, India",Sales Team,0,
+ORI350-00066,Kunal Mehta,kunal.mehta.ori350.66@example.com,Pragati Learning,Logistics,mid_market,growth,2022-09-01,"Lucknow, Uttar Pradesh, India",Website,1,2026-07-16
+ORI350-00067,Riya Shetty,riya.shetty.ori350.67@example.com,Monsoon Media,Media,mid_market,growth,2025-05-19,"Jaipur, Rajasthan, India",Partner,0,
+ORI350-00068,Tanvi Shaikh,tanvi.shaikh.ori350.68@example.com,Lotus Health Network,Media,enterprise,growth,2021-04-21,"Pune, Maharashtra, India",Partner,0,
+ORI350-00069,Vihaan Chawla,vihaan.chawla.ori350.69@example.com,Vistaar Consulting,Logistics,enterprise,starter,2023-07-16,"Coimbatore, Tamil Nadu, India",Email Campaign,0,
+ORI350-00070,Sai Nair,sai.nair.ori350.70@example.com,Nexa Bharat,Media,startup,growth,2024-05-27,"Kochi, Kerala, India",Website,0,
+ORI350-00071,Aniket Pawar,aniket.pawar.ori350.71@example.com,Sahyadri Retail,Media,enterprise,starter,2024-06-03,"Kochi, Kerala, India",Website,0,
+ORI350-00072,Vivaan Mukherjee,vivaan.mukherjee.ori350.72@example.com,Deccan Logistics,Retail,smb,growth,2023-08-03,"Coimbatore, Tamil Nadu, India",Website,0,
+ORI350-00073,Dhruv Jadhav,dhruv.jadhav.ori350.73@example.com,BlueKite Systems,Finance,mid_market,growth,2022-01-23,"Nashik, Maharashtra, India",Sales Team,0,
+ORI350-00074,Avni Gupta,avni.gupta.ori350.74@example.com,Triveni Solutions,Media,smb,growth,2025-06-25,"Chennai, Tamil Nadu, India",Website,0,
+ORI350-00075,Diya More,diya.more.ori350.75@example.com,Vistaar Consulting,Media,smb,growth,2024-03-12,"Mumbai, Maharashtra, India",Email Campaign,0,
+ORI350-00076,Shaurya Deshmukh,shaurya.deshmukh.ori350.76@example.com,CoralBridge Networks,Education,enterprise,enterprise,2021-08-26,"Bengaluru, Karnataka, India",Sales Team,0,
+ORI350-00077,Reyansh Sharma,reyansh.sharma.ori350.77@example.com,Aarohan Digital,Media,startup,growth,2022-11-25,"Bhopal, Madhya Pradesh, India",Email Campaign,0,
+ORI350-00078,Atharv Ansari,atharv.ansari.ori350.78@example.com,Kaveri Commerce,Retail,mid_market,growth,2024-04-13,"Bengaluru, Karnataka, India",Referral,0,
+ORI350-00079,Zoya Kulkarni,zoya.kulkarni.ori350.79@example.com,Asterline Systems,Finance,smb,growth,2024-02-04,"Nashik, Maharashtra, India",Mobile App,0,
+ORI350-00080,Vihaan Shaikh,vihaan.shaikh.ori350.80@example.com,CoralBridge Networks,Logistics,startup,growth,2021-01-26,"Noida, Uttar Pradesh, India",Email Campaign,0,
+ORI350-00081,Aditya Das,aditya.das.ori350.81@example.com,Sahyadri Retail,Retail,smb,growth,2022-07-24,"Mumbai, Maharashtra, India",Website,0,
+ORI350-00082,Neha Menon,neha.menon.ori350.82@example.com,Indus Analytics,Finance,smb,starter,2025-11-22,"Jaipur, Rajasthan, India",Partner,0,
+ORI350-00083,Ayaan Fernandes,ayaan.fernandes.ori350.83@example.com,Indus Analytics,Education,enterprise,growth,2025-04-19,"Mumbai, Maharashtra, India",Partner,0,
+ORI350-00084,Aditi Mehta,aditi.mehta.ori350.84@example.com,BlueKite Systems,Retail,startup,enterprise,2023-09-28,"Noida, Uttar Pradesh, India",Partner,0,
+ORI350-00085,Saanvi Menon,saanvi.menon.ori350.85@example.com,CoralBridge Networks,Media,startup,growth,2025-11-17,"Bhopal, Madhya Pradesh, India",Referral,0,
+ORI350-00086,Ishita Shinde,ishita.shinde.ori350.86@example.com,Monsoon Media,Education,smb,growth,2022-07-19,"Noida, Uttar Pradesh, India",Mobile App,0,
+ORI350-00087,Aniket Verma,aniket.verma.ori350.87@example.com,Indus Analytics,Manufacturing,smb,growth,2021-09-22,"Kochi, Kerala, India",Website,0,
+ORI350-00088,Aadhya Iyer,aadhya.iyer.ori350.88@example.com,Aarohan Digital,Logistics,mid_market,growth,2024-03-19,"Delhi, Delhi, India",LinkedIn,0,
+ORI350-00089,Sai Mehta,sai.mehta.ori350.89@example.com,Nexa Bharat,Technology,startup,starter,2024-11-07,"Bhopal, Madhya Pradesh, India",Sales Team,0,
+ORI350-00090,Avni Chawla,avni.chawla.ori350.90@example.com,Cedar Finance,Logistics,enterprise,starter,2022-04-08,"Pune, Maharashtra, India",Referral,0,
+ORI350-00091,Sai Saxena,sai.saxena.ori350.91@example.com,Triveni Solutions,Technology,enterprise,growth,2025-05-05,"Kochi, Kerala, India",Email Campaign,0,
+ORI350-00092,Zoya Banerjee,zoya.banerjee.ori350.92@example.com,Lotus Health Network,Media,startup,enterprise,2024-12-05,"Ahmedabad, Gujarat, India",Website,1,2025-09-28
+ORI350-00093,Dhruv Khan,dhruv.khan.ori350.93@example.com,Triveni Solutions,Retail,mid_market,starter,2025-01-14,"Visakhapatnam, Andhra Pradesh, India",Referral,0,
+ORI350-00094,Meera Chopra,meera.chopra.ori350.94@example.com,CoralBridge Networks,Finance,mid_market,growth,2025-10-31,"Jaipur, Rajasthan, India",Referral,0,
+ORI350-00095,Kavya Saxena,kavya.saxena.ori350.95@example.com,Deccan Logistics,Media,startup,growth,2026-07-11,"Visakhapatnam, Andhra Pradesh, India",Mobile App,0,
+ORI350-00096,Pooja Iyer,pooja.iyer.ori350.96@example.com,Indus Analytics,Media,mid_market,growth,2024-07-09,"Delhi, Delhi, India",Partner,0,
+ORI350-00097,Aditya Sethi,aditya.sethi.ori350.97@example.com,Bharat Cloudworks,Education,mid_market,growth,2026-05-15,"Jaipur, Rajasthan, India",LinkedIn,0,
+ORI350-00098,Sai Sethi,sai.sethi.ori350.98@example.com,Bharat Cloudworks,Media,mid_market,growth,2021-10-22,"Kochi, Kerala, India",Partner,0,
+ORI350-00099,Atharv Singh,atharv.singh.ori350.99@example.com,Indus Analytics,Media,smb,growth,2025-03-26,"Nagpur, Maharashtra, India",Partner,1,2026-02-01
+ORI350-00100,Dhruv Patil,dhruv.patil.ori350.100@example.com,Triveni Solutions,Finance,startup,growth,2022-09-23,"Coimbatore, Tamil Nadu, India",Referral,0,
+ORI350-00101,Sai Singh,sai.singh.ori350.101@example.com,Bharat Cloudworks,Media,startup,growth,2021-03-05,"Mumbai, Maharashtra, India",Partner,0,
+ORI350-00102,Prisha Chawla,prisha.chawla.ori350.102@example.com,Asterline Systems,Finance,smb,growth,2025-11-16,"Delhi, Delhi, India",Website,0,
+ORI350-00103,Ishaan Reddy,ishaan.reddy.ori350.103@example.com,Deccan Logistics,Technology,startup,starter,2021-07-15,"Pune, Maharashtra, India",Partner,1,2026-02-05
+ORI350-00104,Neha Chopra,neha.chopra.ori350.104@example.com,Aarohan Digital,Finance,enterprise,growth,2026-06-03,"Ahmedabad, Gujarat, India",Referral,0,
+ORI350-00105,Ayaan Chopra,ayaan.chopra.ori350.105@example.com,Kaveri Commerce,Media,mid_market,growth,2021-06-05,"Bengaluru, Karnataka, India",Website,1,2026-03-23
+ORI350-00106,Atharv Kapoor,atharv.kapoor.ori350.106@example.com,Cedar Finance,Technology,enterprise,growth,2026-07-07,"Lucknow, Uttar Pradesh, India",Website,1,2026-08-12
+ORI350-00107,Saanvi Verma,saanvi.verma.ori350.107@example.com,BlueKite Systems,Media,smb,starter,2025-12-13,"Lucknow, Uttar Pradesh, India",Partner,1,2026-06-28
+ORI350-00108,Riya Mukherjee,riya.mukherjee.ori350.108@example.com,Monsoon Media,Media,enterprise,starter,2026-01-28,"Nagpur, Maharashtra, India",Partner,1,2025-07-23
+ORI350-00109,Myra Pillai,myra.pillai.ori350.109@example.com,Lotus Health Network,Education,startup,growth,2023-12-15,"Kochi, Kerala, India",LinkedIn,0,
+ORI350-00110,Zoya Pillai,zoya.pillai.ori350.110@example.com,Kaveri Commerce,Technology,smb,growth,2025-11-12,"Bhopal, Madhya Pradesh, India",Referral,0,
+ORI350-00111,Saanvi Pawar,saanvi.pawar.ori350.111@example.com,Pioneer Infotech,Media,mid_market,growth,2022-05-09,"Chandigarh, Chandigarh, India",Sales Team,0,
+ORI350-00112,Ishita Gupta,ishita.gupta.ori350.112@example.com,Cedar Finance,Retail,enterprise,growth,2026-08-07,"Jaipur, Rajasthan, India",Mobile App,1,2026-09-17
+ORI350-00113,Prisha Iyer,prisha.iyer.ori350.113@example.com,Asterline Systems,Technology,smb,starter,2025-06-23,"Nagpur, Maharashtra, India",Sales Team,0,
+ORI350-00114,Riya Joshi,riya.joshi.ori350.114@example.com,MangoTree Services,Manufacturing,mid_market,growth,2022-11-27,"Chandigarh, Chandigarh, India",Mobile App,1,2025-10-13
+ORI350-00115,Dhruv Pillai,dhruv.pillai.ori350.115@example.com,Pragati Learning,Education,startup,starter,2026-03-06,"Coimbatore, Tamil Nadu, India",Website,0,
+ORI350-00116,Diya Chopra,diya.chopra.ori350.116@example.com,Udaan Technologies,Finance,smb,starter,2024-06-01,"Chennai, Tamil Nadu, India",LinkedIn,0,
+ORI350-00117,Arjun Shah,arjun.shah.ori350.117@example.com,Asterline Systems,Media,mid_market,growth,2023-06-22,"Jaipur, Rajasthan, India",Sales Team,0,
+ORI350-00118,Aditi Chopra,aditi.chopra.ori350.118@example.com,Pioneer Infotech,Retail,smb,growth,2023-12-23,"Coimbatore, Tamil Nadu, India",Partner,0,
+ORI350-00119,Avni Joshi,avni.joshi.ori350.119@example.com,Sahyadri Retail,Education,mid_market,starter,2023-10-04,"Mumbai, Maharashtra, India",Referral,1,2026-10-15
+ORI350-00120,Riya Menon,riya.menon.ori350.120@example.com,Deccan Logistics,Retail,startup,starter,2023-06-08,"Hyderabad, Telangana, India",LinkedIn,0,
+ORI350-00121,Pooja Das,pooja.das.ori350.121@example.com,BlueKite Systems,Retail,mid_market,starter,2023-02-24,"Bhopal, Madhya Pradesh, India",Sales Team,1,2026-01-13
+ORI350-00122,Reyansh Shah,reyansh.shah.ori350.122@example.com,Deccan Logistics,Media,smb,growth,2022-03-31,"Mumbai, Maharashtra, India",Email Campaign,0,
+ORI350-00123,Arjun Pawar,arjun.pawar.ori350.123@example.com,BlueKite Systems,Media,enterprise,starter,2022-08-15,"Chennai, Tamil Nadu, India",LinkedIn,0,
+ORI350-00124,Aditya Patil,aditya.patil.ori350.124@example.com,Pragati Learning,Education,enterprise,growth,2021-08-11,"Surat, Gujarat, India",Website,0,
+ORI350-00125,Neha Das,neha.das.ori350.125@example.com,Monsoon Media,Manufacturing,mid_market,starter,2025-06-01,"Hyderabad, Telangana, India",Mobile App,0,
+ORI350-00126,Ishaan Kaur,ishaan.kaur.ori350.126@example.com,Nexa Bharat,Technology,startup,growth,2021-07-19,"Indore, Madhya Pradesh, India",Email Campaign,0,
+ORI350-00127,Tanvi Khan,tanvi.khan.ori350.127@example.com,Bharat Cloudworks,Manufacturing,mid_market,growth,2023-05-21,"Pune, Maharashtra, India",Mobile App,0,
+ORI350-00128,Sneha Shetty,sneha.shetty.ori350.128@example.com,Deccan Logistics,Media,mid_market,starter,2026-08-02,"Pune, Maharashtra, India",Website,1,2025-11-08
+ORI350-00129,Sneha Shinde,sneha.shinde.ori350.129@example.com,Triveni Solutions,Finance,mid_market,enterprise,2023-06-20,"Chennai, Tamil Nadu, India",Referral,0,
+ORI350-00130,Kiara More,kiara.more.ori350.130@example.com,Nexa Bharat,Media,enterprise,growth,2022-07-03,"Jaipur, Rajasthan, India",Referral,1,2026-06-22
+ORI350-00131,Kiara Saxena,kiara.saxena.ori350.131@example.com,Lotus Health Network,Technology,enterprise,growth,2021-10-22,"Ahmedabad, Gujarat, India",Referral,0,
+ORI350-00132,Atharv Ghosh,atharv.ghosh.ori350.132@example.com,Bharat Cloudworks,Education,smb,growth,2022-12-04,"Noida, Uttar Pradesh, India",Mobile App,0,
+ORI350-00133,Atharv More,atharv.more.ori350.133@example.com,BlueKite Systems,Finance,startup,enterprise,2023-07-08,"Jaipur, Rajasthan, India",Mobile App,0,
+ORI350-00134,Advait Shetty,advait.shetty.ori350.134@example.com,Vistaar Consulting,Technology,mid_market,growth,2024-02-01,"Visakhapatnam, Andhra Pradesh, India",LinkedIn,0,
+ORI350-00135,Aditya Ghosh,aditya.ghosh.ori350.135@example.com,Deccan Logistics,Technology,smb,growth,2023-12-07,"Noida, Uttar Pradesh, India",Referral,0,
+ORI350-00136,Aarav Kulkarni,aarav.kulkarni.ori350.136@example.com,Asterline Systems,Media,mid_market,growth,2021-12-12,"Nagpur, Maharashtra, India",Sales Team,0,
+ORI350-00137,Prisha Chopra,prisha.chopra.ori350.137@example.com,Asterline Systems,Media,startup,starter,2025-04-18,"Bhopal, Madhya Pradesh, India",LinkedIn,0,
+ORI350-00138,Vihaan Naidu,vihaan.naidu.ori350.138@example.com,Vistaar Consulting,Media,mid_market,growth,2021-07-08,"Visakhapatnam, Andhra Pradesh, India",LinkedIn,0,
+ORI350-00139,Zoya Gupta,zoya.gupta.ori350.139@example.com,Lotus Health Network,Media,smb,growth,2024-09-08,"Delhi, Delhi, India",Sales Team,0,
+ORI350-00140,Ayaan Reddy,ayaan.reddy.ori350.140@example.com,Asterline Systems,Education,smb,growth,2022-12-11,"Nashik, Maharashtra, India",Website,0,
+ORI350-00141,Siddharth Shinde,siddharth.shinde.ori350.141@example.com,Monsoon Media,Media,enterprise,growth,2021-11-09,"Noida, Uttar Pradesh, India",Website,1,2026-07-13
+ORI350-00142,Arjun Khan,arjun.khan.ori350.142@example.com,Lotus Health Network,Media,mid_market,growth,2026-01-25,"Lucknow, Uttar Pradesh, India",Sales Team,0,
+ORI350-00143,Myra Nair,myra.nair.ori350.143@example.com,Narmada Manufacturing,Media,mid_market,growth,2025-05-18,"Bhopal, Madhya Pradesh, India",Partner,0,
+ORI350-00144,Kabir Jadhav,kabir.jadhav.ori350.144@example.com,CoralBridge Networks,Media,startup,growth,2024-12-14,"Chandigarh, Chandigarh, India",LinkedIn,0,
+ORI350-00145,Yash Saxena,yash.saxena.ori350.145@example.com,Cedar Finance,Retail,enterprise,growth,2025-03-15,"Hyderabad, Telangana, India",Partner,0,
+ORI350-00146,Pooja Sharma,pooja.sharma.ori350.146@example.com,Vistaar Consulting,Media,smb,starter,2023-07-28,"Coimbatore, Tamil Nadu, India",Mobile App,0,
+ORI350-00147,Nandini Singh,nandini.singh.ori350.147@example.com,Narmada Manufacturing,Manufacturing,mid_market,growth,2026-08-03,"Kochi, Kerala, India",LinkedIn,0,
+ORI350-00148,Arjun Gupta,arjun.gupta.ori350.148@example.com,Indus Analytics,Technology,smb,starter,2022-07-30,"Bengaluru, Karnataka, India",LinkedIn,0,
+ORI350-00149,Aniket Shaikh,aniket.shaikh.ori350.149@example.com,Nexa Bharat,Media,smb,growth,2022-08-19,"Pune, Maharashtra, India",Mobile App,0,
+ORI350-00150,Aadhya Verma,aadhya.verma.ori350.150@example.com,Nexa Bharat,Media,startup,starter,2024-12-30,"Kolkata, West Bengal, India",Partner,0,
+ORI350-00151,Saanvi Menon,saanvi.menon.ori350.151@example.com,BlueKite Systems,Media,smb,starter,2021-10-24,"Indore, Madhya Pradesh, India",Mobile App,0,
+ORI350-00152,Reyansh Chawla,reyansh.chawla.ori350.152@example.com,Monsoon Media,Media,mid_market,growth,2025-12-17,"Surat, Gujarat, India",Website,0,
+ORI350-00153,Ira Ansari,ira.ansari.ori350.153@example.com,Lotus Health Network,Logistics,smb,growth,2026-02-24,"Mumbai, Maharashtra, India",LinkedIn,0,
+ORI350-00154,Vihaan Pawar,vihaan.pawar.ori350.154@example.com,MangoTree Services,Logistics,mid_market,starter,2022-09-24,"Indore, Madhya Pradesh, India",Email Campaign,1,2025-11-21
+ORI350-00155,Aditya More,aditya.more.ori350.155@example.com,Indus Analytics,Media,startup,growth,2021-08-13,"Delhi, Delhi, India",Mobile App,0,
+ORI350-00156,Prisha Malhotra,prisha.malhotra.ori350.156@example.com,Pioneer Infotech,Logistics,mid_market,starter,2025-03-27,"Visakhapatnam, Andhra Pradesh, India",Website,1,2025-10-12
+ORI350-00157,Ira Mukherjee,ira.mukherjee.ori350.157@example.com,MangoTree Services,Finance,mid_market,enterprise,2026-06-06,"Kolkata, West Bengal, India",LinkedIn,1,2026-07-27
+ORI350-00158,Shaurya More,shaurya.more.ori350.158@example.com,Udaan Technologies,Technology,mid_market,growth,2021-12-24,"Kochi, Kerala, India",Email Campaign,0,
+ORI350-00159,Yash Kaur,yash.kaur.ori350.159@example.com,Asterline Systems,Technology,startup,growth,2023-07-15,"Pune, Maharashtra, India",LinkedIn,0,
+ORI350-00160,Nandini Bansal,nandini.bansal.ori350.160@example.com,Cedar Finance,Finance,smb,growth,2023-06-06,"Jaipur, Rajasthan, India",Partner,0,
+ORI350-00161,Aniket Joshi,aniket.joshi.ori350.161@example.com,Aarohan Digital,Media,smb,growth,2024-11-18,"Mumbai, Maharashtra, India",LinkedIn,0,
+ORI350-00162,Sneha Banerjee,sneha.banerjee.ori350.162@example.com,MangoTree Services,Healthcare,smb,growth,2021-06-13,"Jaipur, Rajasthan, India",Sales Team,0,
+ORI350-00163,Nandini Joshi,nandini.joshi.ori350.163@example.com,Monsoon Media,Media,startup,growth,2023-01-27,"Coimbatore, Tamil Nadu, India",Partner,0,
+ORI350-00164,Vivaan Bansal,vivaan.bansal.ori350.164@example.com,Lotus Health Network,Media,smb,growth,2025-07-01,"Bengaluru, Karnataka, India",LinkedIn,0,
+ORI350-00165,Tanvi Shaikh,tanvi.shaikh.ori350.165@example.com,Pioneer Infotech,Media,enterprise,growth,2025-08-05,"Indore, Madhya Pradesh, India",Referral,0,
+ORI350-00166,Ishaan Deshmukh,ishaan.deshmukh.ori350.166@example.com,Pioneer Infotech,Healthcare,mid_market,growth,2022-02-26,"Pune, Maharashtra, India",Mobile App,0,
+ORI350-00167,Pooja Shetty,pooja.shetty.ori350.167@example.com,Narmada Manufacturing,Education,enterprise,growth,2025-07-30,"Lucknow, Uttar Pradesh, India",Referral,0,
+ORI350-00168,Vihaan Naidu,vihaan.naidu.ori350.168@example.com,BlueKite Systems,Media,smb,growth,2021-06-18,"Pune, Maharashtra, India",Website,0,
+ORI350-00169,Saanvi Iyer,saanvi.iyer.ori350.169@example.com,Sahyadri Retail,Media,enterprise,growth,2021-07-10,"Chandigarh, Chandigarh, India",Referral,0,
+ORI350-00170,Kavya Pillai,kavya.pillai.ori350.170@example.com,MangoTree Services,Media,smb,starter,2024-09-29,"Indore, Madhya Pradesh, India",Referral,0,
+ORI350-00171,Sneha Gupta,sneha.gupta.ori350.171@example.com,Nexa Bharat,Retail,startup,growth,2026-03-13,"Bhopal, Madhya Pradesh, India",Email Campaign,0,
+ORI350-00172,Advait Singh,advait.singh.ori350.172@example.com,Aarohan Digital,Technology,startup,growth,2026-04-24,"Chandigarh, Chandigarh, India",Website,0,
+ORI350-00173,Atharv Singh,atharv.singh.ori350.173@example.com,Pragati Learning,Retail,startup,growth,2024-03-29,"Kochi, Kerala, India",Partner,1,2026-04-10
+ORI350-00174,Sneha Mukherjee,sneha.mukherjee.ori350.174@example.com,Sahyadri Retail,Technology,startup,growth,2026-06-27,"Hyderabad, Telangana, India",Referral,0,
+ORI350-00175,Aadhya Mukherjee,aadhya.mukherjee.ori350.175@example.com,Nexa Bharat,Retail,mid_market,enterprise,2025-09-08,"Bengaluru, Karnataka, India",Sales Team,0,
+ORI350-00176,Ishita Patil,ishita.patil.ori350.176@example.com,Nexa Bharat,Logistics,mid_market,growth,2026-06-28,"Coimbatore, Tamil Nadu, India",Website,0,
+ORI350-00177,Zoya Shah,zoya.shah.ori350.177@example.com,Vistaar Consulting,Media,startup,growth,2023-09-23,"Kolkata, West Bengal, India",Email Campaign,0,
+ORI350-00178,Kavya Iyer,kavya.iyer.ori350.178@example.com,Udaan Technologies,Media,smb,growth,2023-06-19,"Surat, Gujarat, India",Sales Team,0,
+ORI350-00179,Dhruv Shinde,dhruv.shinde.ori350.179@example.com,BlueKite Systems,Logistics,mid_market,growth,2021-03-13,"Chandigarh, Chandigarh, India",Email Campaign,1,2025-09-30
+ORI350-00180,Aarav Deshmukh,aarav.deshmukh.ori350.180@example.com,Pioneer Infotech,Finance,startup,growth,2026-07-04,"Mumbai, Maharashtra, India",Partner,0,
+ORI350-00181,Ira Pillai,ira.pillai.ori350.181@example.com,Pioneer Infotech,Media,enterprise,growth,2025-12-19,"Nagpur, Maharashtra, India",Partner,0,
+ORI350-00182,Arjun Fernandes,arjun.fernandes.ori350.182@example.com,Monsoon Media,Education,mid_market,enterprise,2023-10-22,"Lucknow, Uttar Pradesh, India",Sales Team,1,2025-05-04
+ORI350-00183,Aditi Ghosh,aditi.ghosh.ori350.183@example.com,Udaan Technologies,Media,mid_market,starter,2024-08-26,"Visakhapatnam, Andhra Pradesh, India",LinkedIn,0,
+ORI350-00184,Neha Iyer,neha.iyer.ori350.184@example.com,Vistaar Consulting,Finance,smb,starter,2023-05-30,"Hyderabad, Telangana, India",Mobile App,0,
+ORI350-00185,Saanvi Kaur,saanvi.kaur.ori350.185@example.com,Indus Analytics,Logistics,mid_market,enterprise,2023-06-09,"Visakhapatnam, Andhra Pradesh, India",Sales Team,0,
+ORI350-00186,Shaurya Mehta,shaurya.mehta.ori350.186@example.com,Lotus Health Network,Logistics,smb,growth,2023-05-05,"Mumbai, Maharashtra, India",Partner,0,
+ORI350-00187,Ananya Khan,ananya.khan.ori350.187@example.com,Sahyadri Retail,Logistics,mid_market,growth,2024-01-17,"Noida, Uttar Pradesh, India",Website,0,
+ORI350-00188,Reyansh Sharma,reyansh.sharma.ori350.188@example.com,BlueKite Systems,Media,startup,starter,2026-07-11,"Bhopal, Madhya Pradesh, India",Website,0,
+ORI350-00189,Krishna Shetty,krishna.shetty.ori350.189@example.com,Vistaar Consulting,Technology,enterprise,growth,2026-09-05,"Bengaluru, Karnataka, India",Email Campaign,0,
+ORI350-00190,Ishaan Deshmukh,ishaan.deshmukh.ori350.190@example.com,Cedar Finance,Education,startup,growth,2025-11-23,"Lucknow, Uttar Pradesh, India",Referral,1,2026-07-14
+ORI350-00191,Aditya Verma,aditya.verma.ori350.191@example.com,Triveni Solutions,Retail,smb,growth,2024-10-10,"Chennai, Tamil Nadu, India",Mobile App,0,
+ORI350-00192,Yash Iyer,yash.iyer.ori350.192@example.com,Pragati Learning,Healthcare,startup,growth,2021-10-31,"Indore, Madhya Pradesh, India",Mobile App,0,
+ORI350-00193,Vihaan Shah,vihaan.shah.ori350.193@example.com,Udaan Technologies,Media,smb,starter,2023-04-03,"Indore, Madhya Pradesh, India",LinkedIn,0,
+ORI350-00194,Kabir Kulkarni,kabir.kulkarni.ori350.194@example.com,Bharat Cloudworks,Manufacturing,smb,growth,2024-11-29,"Surat, Gujarat, India",Email Campaign,0,
+ORI350-00195,Nandini Khan,nandini.khan.ori350.195@example.com,Cedar Finance,Education,smb,growth,2024-04-25,"Chandigarh, Chandigarh, India",Mobile App,0,
+ORI350-00196,Prisha Patil,prisha.patil.ori350.196@example.com,Kaveri Commerce,Media,smb,growth,2026-08-13,"Lucknow, Uttar Pradesh, India",Website,0,
+ORI350-00197,Kabir Shaikh,kabir.shaikh.ori350.197@example.com,Udaan Technologies,Logistics,enterprise,starter,2024-10-17,"Nashik, Maharashtra, India",Mobile App,0,
+ORI350-00198,Arjun Pawar,arjun.pawar.ori350.198@example.com,Lotus Health Network,Technology,mid_market,starter,2022-09-04,"Coimbatore, Tamil Nadu, India",LinkedIn,1,2025-11-04
+ORI350-00199,Aarav Banerjee,aarav.banerjee.ori350.199@example.com,Nexa Bharat,Education,smb,starter,2025-03-04,"Kochi, Kerala, India",Sales Team,0,
+ORI350-00200,Advait Reddy,advait.reddy.ori350.200@example.com,Vistaar Consulting,Media,mid_market,starter,2021-11-15,"Jaipur, Rajasthan, India",Email Campaign,0,
+ORI350-00201,Rohan Bansal,rohan.bansal.ori350.201@example.com,Triveni Solutions,Retail,smb,growth,2021-12-11,"Chennai, Tamil Nadu, India",Email Campaign,0,
+ORI350-00202,Aarav Iyer,aarav.iyer.ori350.202@example.com,Deccan Logistics,Media,mid_market,growth,2023-06-17,"Ahmedabad, Gujarat, India",Website,1,2026-06-24
+ORI350-00203,Yash Reddy,yash.reddy.ori350.203@example.com,Lotus Health Network,Media,mid_market,growth,2023-08-05,"Noida, Uttar Pradesh, India",LinkedIn,0,
+ORI350-00204,Riya Deshmukh,riya.deshmukh.ori350.204@example.com,Pioneer Infotech,Retail,smb,growth,2026-02-25,"Nagpur, Maharashtra, India",Mobile App,0,
+ORI350-00205,Avni Sethi,avni.sethi.ori350.205@example.com,Narmada Manufacturing,Media,smb,growth,2021-11-20,"Bhopal, Madhya Pradesh, India",LinkedIn,1,2026-05-23
+ORI350-00206,Dhruv Shetty,dhruv.shetty.ori350.206@example.com,Cedar Finance,Media,smb,growth,2024-05-06,"Visakhapatnam, Andhra Pradesh, India",Referral,0,
+ORI350-00207,Sneha Chopra,sneha.chopra.ori350.207@example.com,Cedar Finance,Logistics,smb,growth,2024-02-07,"Bengaluru, Karnataka, India",Mobile App,0,
+ORI350-00208,Kiara Verma,kiara.verma.ori350.208@example.com,Cedar Finance,Media,smb,starter,2021-12-10,"Coimbatore, Tamil Nadu, India",Referral,0,
+ORI350-00209,Diya Fernandes,diya.fernandes.ori350.209@example.com,CoralBridge Networks,Media,smb,starter,2026-08-12,"Nashik, Maharashtra, India",Email Campaign,0,
+ORI350-00210,Sai Iyer,sai.iyer.ori350.210@example.com,CoralBridge Networks,Retail,mid_market,growth,2026-06-08,"Noida, Uttar Pradesh, India",Referral,0,
+ORI350-00211,Aniket Sharma,aniket.sharma.ori350.211@example.com,Vistaar Consulting,Media,mid_market,growth,2025-08-10,"Mumbai, Maharashtra, India",Email Campaign,0,
+ORI350-00212,Pooja Sharma,pooja.sharma.ori350.212@example.com,Indus Analytics,Media,enterprise,growth,2026-09-02,"Noida, Uttar Pradesh, India",Mobile App,0,
+ORI350-00213,Tanvi Reddy,tanvi.reddy.ori350.213@example.com,Monsoon Media,Retail,smb,growth,2022-12-21,"Delhi, Delhi, India",Sales Team,0,
+ORI350-00214,Dhruv Mukherjee,dhruv.mukherjee.ori350.214@example.com,CoralBridge Networks,Media,startup,growth,2025-08-21,"Nashik, Maharashtra, India",Mobile App,0,
+ORI350-00215,Vihaan Fernandes,vihaan.fernandes.ori350.215@example.com,MangoTree Services,Manufacturing,startup,growth,2025-04-21,"Mumbai, Maharashtra, India",LinkedIn,0,
+ORI350-00216,Sneha Fernandes,sneha.fernandes.ori350.216@example.com,MangoTree Services,Manufacturing,startup,growth,2026-04-13,"Ahmedabad, Gujarat, India",Email Campaign,1,2026-09-20
+ORI350-00217,Kiara Shinde,kiara.shinde.ori350.217@example.com,Asterline Systems,Technology,mid_market,starter,2021-07-13,"Chennai, Tamil Nadu, India",Mobile App,1,2026-04-30
+ORI350-00218,Ishita Reddy,ishita.reddy.ori350.218@example.com,MangoTree Services,Media,smb,growth,2024-12-06,"Surat, Gujarat, India",Referral,0,
+ORI350-00219,Aditya Deshmukh,aditya.deshmukh.ori350.219@example.com,Vistaar Consulting,Technology,smb,starter,2023-12-25,"Kolkata, West Bengal, India",LinkedIn,0,
+ORI350-00220,Vivaan Reddy,vivaan.reddy.ori350.220@example.com,Triveni Solutions,Manufacturing,smb,growth,2022-07-13,"Bengaluru, Karnataka, India",Sales Team,0,
+ORI350-00221,Advait Reddy,advait.reddy.ori350.221@example.com,Triveni Solutions,Education,mid_market,growth,2025-11-16,"Pune, Maharashtra, India",Referral,0,
+ORI350-00222,Aarav Nair,aarav.nair.ori350.222@example.com,Pioneer Infotech,Logistics,mid_market,enterprise,2022-06-17,"Chennai, Tamil Nadu, India",LinkedIn,0,
+ORI350-00223,Neha Kulkarni,neha.kulkarni.ori350.223@example.com,Sahyadri Retail,Media,startup,enterprise,2023-05-02,"Jaipur, Rajasthan, India",Email Campaign,0,
+ORI350-00224,Aarav Reddy,aarav.reddy.ori350.224@example.com,Vistaar Consulting,Media,startup,growth,2024-07-28,"Mumbai, Maharashtra, India",Sales Team,0,
+ORI350-00225,Ishita Mukherjee,ishita.mukherjee.ori350.225@example.com,Asterline Systems,Media,smb,growth,2025-02-21,"Noida, Uttar Pradesh, India",Website,0,
+ORI350-00226,Reyansh Das,reyansh.das.ori350.226@example.com,Narmada Manufacturing,Technology,enterprise,growth,2021-01-29,"Visakhapatnam, Andhra Pradesh, India",Sales Team,0,
+ORI350-00227,Aniket Kulkarni,aniket.kulkarni.ori350.227@example.com,Cedar Finance,Media,mid_market,growth,2025-05-01,"Pune, Maharashtra, India",Website,0,
+ORI350-00228,Sneha Patil,sneha.patil.ori350.228@example.com,Pragati Learning,Media,mid_market,starter,2021-11-26,"Surat, Gujarat, India",Email Campaign,0,
+ORI350-00229,Tanvi Gupta,tanvi.gupta.ori350.229@example.com,Monsoon Media,Technology,enterprise,growth,2026-09-14,"Mumbai, Maharashtra, India",Email Campaign,0,
+ORI350-00230,Ananya Chopra,ananya.chopra.ori350.230@example.com,Pragati Learning,Logistics,startup,growth,2026-02-04,"Indore, Madhya Pradesh, India",Mobile App,0,
+ORI350-00231,Prisha Ghosh,prisha.ghosh.ori350.231@example.com,BlueKite Systems,Healthcare,smb,growth,2024-10-19,"Kolkata, West Bengal, India",Website,1,2026-01-26
+ORI350-00232,Avni Kapoor,avni.kapoor.ori350.232@example.com,Kaveri Commerce,Finance,smb,starter,2021-02-19,"Hyderabad, Telangana, India",Sales Team,1,2026-08-14
+ORI350-00233,Ishaan Menon,ishaan.menon.ori350.233@example.com,Asterline Systems,Retail,smb,growth,2024-08-19,"Surat, Gujarat, India",Partner,0,
+ORI350-00234,Sai Chopra,sai.chopra.ori350.234@example.com,Asterline Systems,Media,smb,growth,2026-06-17,"Visakhapatnam, Andhra Pradesh, India",Partner,0,
+ORI350-00235,Avni Shah,avni.shah.ori350.235@example.com,Triveni Solutions,Finance,smb,starter,2023-04-22,"Mumbai, Maharashtra, India",Mobile App,0,
+ORI350-00236,Ananya Sharma,ananya.sharma.ori350.236@example.com,Pragati Learning,Healthcare,smb,enterprise,2025-01-13,"Mumbai, Maharashtra, India",Partner,1,2025-10-27
+ORI350-00237,Siddharth Ansari,siddharth.ansari.ori350.237@example.com,Indus Analytics,Education,mid_market,growth,2025-06-22,"Kochi, Kerala, India",Partner,0,
+ORI350-00238,Siddharth Shaikh,siddharth.shaikh.ori350.238@example.com,Asterline Systems,Manufacturing,mid_market,starter,2022-12-27,"Kochi, Kerala, India",Mobile App,1,2025-09-05
+ORI350-00239,Arjun Nair,arjun.nair.ori350.239@example.com,Pragati Learning,Manufacturing,mid_market,enterprise,2025-01-12,"Chennai, Tamil Nadu, India",Partner,0,
+ORI350-00240,Reyansh Iyer,reyansh.iyer.ori350.240@example.com,Monsoon Media,Technology,mid_market,growth,2026-08-23,"Indore, Madhya Pradesh, India",Partner,0,
+ORI350-00241,Ishita Malhotra,ishita.malhotra.ori350.241@example.com,Kaveri Commerce,Media,smb,growth,2022-03-14,"Chennai, Tamil Nadu, India",Sales Team,0,
+ORI350-00242,Atharv Kapoor,atharv.kapoor.ori350.242@example.com,Aarohan Digital,Media,mid_market,growth,2025-06-11,"Mumbai, Maharashtra, India",Sales Team,0,
+ORI350-00243,Ishaan Banerjee,ishaan.banerjee.ori350.243@example.com,Nexa Bharat,Finance,startup,starter,2026-03-20,"Bengaluru, Karnataka, India",Mobile App,1,2025-11-09
+ORI350-00244,Shaurya Pawar,shaurya.pawar.ori350.244@example.com,Triveni Solutions,Manufacturing,mid_market,growth,2024-10-23,"Chennai, Tamil Nadu, India",Partner,0,
+ORI350-00245,Zoya More,zoya.more.ori350.245@example.com,Vistaar Consulting,Technology,smb,growth,2025-01-12,"Lucknow, Uttar Pradesh, India",Referral,0,
+ORI350-00246,Rohan Ansari,rohan.ansari.ori350.246@example.com,BlueKite Systems,Manufacturing,mid_market,growth,2025-05-18,"Indore, Madhya Pradesh, India",Email Campaign,0,
+ORI350-00247,Ira Pillai,ira.pillai.ori350.247@example.com,Narmada Manufacturing,Healthcare,mid_market,growth,2023-02-09,"Visakhapatnam, Andhra Pradesh, India",Website,0,
+ORI350-00248,Avni Verma,avni.verma.ori350.248@example.com,Monsoon Media,Manufacturing,smb,starter,2022-03-07,"Kochi, Kerala, India",Sales Team,0,
+ORI350-00249,Ira Kaur,ira.kaur.ori350.249@example.com,MangoTree Services,Media,startup,growth,2023-06-06,"Bhopal, Madhya Pradesh, India",Mobile App,1,2025-05-31
+ORI350-00250,Vihaan Singh,vihaan.singh.ori350.250@example.com,MangoTree Services,Media,enterprise,starter,2022-07-13,"Pune, Maharashtra, India",Partner,0,
+ORI350-00251,Sneha Saxena,sneha.saxena.ori350.251@example.com,Sahyadri Retail,Media,mid_market,growth,2025-06-27,"Bhopal, Madhya Pradesh, India",Mobile App,0,
+ORI350-00252,Zoya Khan,zoya.khan.ori350.252@example.com,Monsoon Media,Finance,smb,starter,2024-12-31,"Kolkata, West Bengal, India",Sales Team,1,2026-05-16
+ORI350-00253,Krishna Khan,krishna.khan.ori350.253@example.com,Sahyadri Retail,Media,smb,growth,2025-06-22,"Pune, Maharashtra, India",Partner,0,
+ORI350-00254,Riya Sethi,riya.sethi.ori350.254@example.com,Indus Analytics,Education,startup,starter,2024-07-23,"Lucknow, Uttar Pradesh, India",Website,0,
+ORI350-00255,Rohan Deshmukh,rohan.deshmukh.ori350.255@example.com,Vistaar Consulting,Media,smb,growth,2022-09-21,"Kolkata, West Bengal, India",Referral,1,2025-10-05
+ORI350-00256,Ayaan Joshi,ayaan.joshi.ori350.256@example.com,Monsoon Media,Media,smb,starter,2024-04-14,"Chennai, Tamil Nadu, India",Partner,1,2025-08-30
+ORI350-00257,Riya Nair,riya.nair.ori350.257@example.com,Udaan Technologies,Logistics,smb,enterprise,2025-02-14,"Surat, Gujarat, India",Website,0,
+ORI350-00258,Aditya Shinde,aditya.shinde.ori350.258@example.com,Pragati Learning,Finance,mid_market,starter,2025-08-02,"Visakhapatnam, Andhra Pradesh, India",Email Campaign,0,
+ORI350-00259,Saanvi Fernandes,saanvi.fernandes.ori350.259@example.com,Vistaar Consulting,Technology,mid_market,enterprise,2021-01-16,"Kochi, Kerala, India",Referral,0,
+ORI350-00260,Arjun Patil,arjun.patil.ori350.260@example.com,Kaveri Commerce,Manufacturing,mid_market,growth,2025-05-19,"Lucknow, Uttar Pradesh, India",Sales Team,1,2025-06-06
+ORI350-00261,Siddharth Sharma,siddharth.sharma.ori350.261@example.com,CoralBridge Networks,Media,enterprise,growth,2022-12-29,"Bengaluru, Karnataka, India",Email Campaign,0,
+ORI350-00262,Ayaan Shah,ayaan.shah.ori350.262@example.com,Vistaar Consulting,Logistics,smb,growth,2026-01-26,"Delhi, Delhi, India",LinkedIn,0,
+ORI350-00263,Avni Fernandes,avni.fernandes.ori350.263@example.com,MangoTree Services,Logistics,smb,growth,2025-10-17,"Nashik, Maharashtra, India",LinkedIn,0,
+ORI350-00264,Aniket Ansari,aniket.ansari.ori350.264@example.com,CoralBridge Networks,Manufacturing,smb,growth,2026-10-12,"Delhi, Delhi, India",Partner,0,
+ORI350-00265,Ayaan Banerjee,ayaan.banerjee.ori350.265@example.com,Bharat Cloudworks,Education,smb,growth,2022-06-06,"Visakhapatnam, Andhra Pradesh, India",Partner,0,
+ORI350-00266,Sai Singh,sai.singh.ori350.266@example.com,Bharat Cloudworks,Manufacturing,enterprise,growth,2026-03-03,"Kolkata, West Bengal, India",Mobile App,0,
+ORI350-00267,Meera Nair,meera.nair.ori350.267@example.com,Udaan Technologies,Finance,smb,growth,2025-05-12,"Kolkata, West Bengal, India",Email Campaign,0,
+ORI350-00268,Krishna Shah,krishna.shah.ori350.268@example.com,Pioneer Infotech,Manufacturing,startup,growth,2022-07-17,"Chennai, Tamil Nadu, India",Sales Team,1,2025-04-28
+ORI350-00269,Sneha Mehta,sneha.mehta.ori350.269@example.com,Cedar Finance,Education,smb,growth,2026-06-03,"Jaipur, Rajasthan, India",Website,1,2026-08-09
+ORI350-00270,Diya Kapoor,diya.kapoor.ori350.270@example.com,Lotus Health Network,Technology,smb,enterprise,2024-06-01,"Indore, Madhya Pradesh, India",Sales Team,0,
+ORI350-00271,Aarav Patil,aarav.patil.ori350.271@example.com,Lotus Health Network,Media,smb,growth,2022-02-22,"Chennai, Tamil Nadu, India",Referral,0,
+ORI350-00272,Rohan Kaur,rohan.kaur.ori350.272@example.com,Udaan Technologies,Media,startup,growth,2024-03-01,"Kolkata, West Bengal, India",Referral,0,
+ORI350-00273,Ira Banerjee,ira.banerjee.ori350.273@example.com,Pragati Learning,Media,enterprise,enterprise,2024-05-10,"Mumbai, Maharashtra, India",Sales Team,0,
+ORI350-00274,Sai Shetty,sai.shetty.ori350.274@example.com,Pragati Learning,Media,mid_market,growth,2025-08-14,"Chandigarh, Chandigarh, India",LinkedIn,1,2026-08-17
+ORI350-00275,Diya Ansari,diya.ansari.ori350.275@example.com,Lotus Health Network,Healthcare,startup,growth,2021-12-12,"Jaipur, Rajasthan, India",Email Campaign,1,2026-10-14
+ORI350-00276,Ananya Shaikh,ananya.shaikh.ori350.276@example.com,Cedar Finance,Media,smb,growth,2022-04-04,"Lucknow, Uttar Pradesh, India",Mobile App,1,2026-04-29
+ORI350-00277,Ayaan Shinde,ayaan.shinde.ori350.277@example.com,BlueKite Systems,Manufacturing,smb,growth,2023-08-05,"Visakhapatnam, Andhra Pradesh, India",Partner,0,
+ORI350-00278,Sneha Mukherjee,sneha.mukherjee.ori350.278@example.com,Monsoon Media,Media,startup,enterprise,2022-12-11,"Noida, Uttar Pradesh, India",Mobile App,0,
+ORI350-00279,Advait Pillai,advait.pillai.ori350.279@example.com,Lotus Health Network,Manufacturing,enterprise,starter,2022-10-30,"Delhi, Delhi, India",Partner,0,
+ORI350-00280,Zoya Shaikh,zoya.shaikh.ori350.280@example.com,Pragati Learning,Retail,startup,starter,2025-09-27,"Jaipur, Rajasthan, India",Sales Team,0,
+ORI350-00281,Vivaan Joshi,vivaan.joshi.ori350.281@example.com,Bharat Cloudworks,Media,startup,starter,2024-01-13,"Jaipur, Rajasthan, India",Referral,0,
+ORI350-00282,Sneha Sethi,sneha.sethi.ori350.282@example.com,Pragati Learning,Logistics,mid_market,growth,2022-03-12,"Indore, Madhya Pradesh, India",Partner,1,2025-05-01
+ORI350-00283,Meera Shetty,meera.shetty.ori350.283@example.com,Nexa Bharat,Media,startup,starter,2023-08-22,"Surat, Gujarat, India",Email Campaign,0,
+ORI350-00284,Aniket Ghosh,aniket.ghosh.ori350.284@example.com,Nexa Bharat,Retail,startup,growth,2025-04-03,"Chandigarh, Chandigarh, India",Partner,1,2026-04-09
+ORI350-00285,Kiara Ansari,kiara.ansari.ori350.285@example.com,Indus Analytics,Logistics,smb,starter,2022-05-27,"Visakhapatnam, Andhra Pradesh, India",Referral,1,2026-05-23
+ORI350-00286,Vivaan Jadhav,vivaan.jadhav.ori350.286@example.com,Sahyadri Retail,Technology,smb,growth,2021-07-25,"Indore, Madhya Pradesh, India",Website,0,
+ORI350-00287,Sai Bansal,sai.bansal.ori350.287@example.com,MangoTree Services,Logistics,startup,growth,2024-04-23,"Hyderabad, Telangana, India",Mobile App,0,
+ORI350-00288,Kiara Shaikh,kiara.shaikh.ori350.288@example.com,Asterline Systems,Healthcare,startup,growth,2026-05-27,"Nagpur, Maharashtra, India",Mobile App,0,
+ORI350-00289,Nandini Jadhav,nandini.jadhav.ori350.289@example.com,Narmada Manufacturing,Finance,mid_market,growth,2021-11-29,"Kolkata, West Bengal, India",Partner,0,
+ORI350-00290,Meera Fernandes,meera.fernandes.ori350.290@example.com,Lotus Health Network,Healthcare,mid_market,growth,2021-12-06,"Visakhapatnam, Andhra Pradesh, India",LinkedIn,1,2025-12-27
+ORI350-00291,Reyansh Das,reyansh.das.ori350.291@example.com,Deccan Logistics,Media,smb,growth,2026-02-13,"Jaipur, Rajasthan, India",Mobile App,0,
+ORI350-00292,Saanvi Das,saanvi.das.ori350.292@example.com,Nexa Bharat,Media,enterprise,growth,2024-08-09,"Kochi, Kerala, India",LinkedIn,0,
+ORI350-00293,Aditya Verma,aditya.verma.ori350.293@example.com,Udaan Technologies,Logistics,startup,growth,2024-01-27,"Delhi, Delhi, India",Referral,1,2026-06-23
+ORI350-00294,Ishita Pillai,ishita.pillai.ori350.294@example.com,Bharat Cloudworks,Media,mid_market,growth,2025-09-19,"Pune, Maharashtra, India",LinkedIn,0,
+ORI350-00295,Yash Bansal,yash.bansal.ori350.295@example.com,Asterline Systems,Logistics,startup,starter,2025-11-11,"Kochi, Kerala, India",Email Campaign,0,
+ORI350-00296,Vihaan Kapoor,vihaan.kapoor.ori350.296@example.com,Udaan Technologies,Retail,mid_market,growth,2022-03-05,"Chennai, Tamil Nadu, India",Sales Team,0,
+ORI350-00297,Krishna Mishra,krishna.mishra.ori350.297@example.com,Kaveri Commerce,Logistics,mid_market,starter,2024-08-06,"Nashik, Maharashtra, India",Website,0,
+ORI350-00298,Riya Verma,riya.verma.ori350.298@example.com,Deccan Logistics,Technology,mid_market,starter,2026-05-17,"Lucknow, Uttar Pradesh, India",Website,1,2026-05-02
+ORI350-00299,Diya Menon,diya.menon.ori350.299@example.com,Bharat Cloudworks,Media,enterprise,starter,2023-05-31,"Chandigarh, Chandigarh, India",Partner,0,
+ORI350-00300,Ishita Pawar,ishita.pawar.ori350.300@example.com,Asterline Systems,Finance,mid_market,growth,2025-01-16,"Ahmedabad, Gujarat, India",Website,0,
+ORI350-00301,Ishaan Sharma,ishaan.sharma.ori350.301@example.com,Pioneer Infotech,Media,smb,growth,2023-12-20,"Kolkata, West Bengal, India",Mobile App,0,
+ORI350-00302,Vihaan Mukherjee,vihaan.mukherjee.ori350.302@example.com,Deccan Logistics,Manufacturing,enterprise,growth,2023-09-20,"Kolkata, West Bengal, India",Sales Team,1,2026-02-25
+ORI350-00303,Diya Malhotra,diya.malhotra.ori350.303@example.com,Cedar Finance,Retail,mid_market,growth,2026-04-12,"Indore, Madhya Pradesh, India",LinkedIn,0,
+ORI350-00304,Myra Menon,myra.menon.ori350.304@example.com,MangoTree Services,Technology,smb,growth,2024-06-01,"Ahmedabad, Gujarat, India",Partner,0,
+ORI350-00305,Vivaan Saxena,vivaan.saxena.ori350.305@example.com,Triveni Solutions,Media,smb,growth,2021-04-19,"Jaipur, Rajasthan, India",Email Campaign,1,2026-06-02
+ORI350-00306,Sneha Kulkarni,sneha.kulkarni.ori350.306@example.com,Lotus Health Network,Media,mid_market,starter,2022-10-29,"Kolkata, West Bengal, India",Website,1,2025-12-12
+ORI350-00307,Ishita Patil,ishita.patil.ori350.307@example.com,Indus Analytics,Logistics,mid_market,growth,2021-06-01,"Nashik, Maharashtra, India",Mobile App,0,
+ORI350-00308,Krishna More,krishna.more.ori350.308@example.com,CoralBridge Networks,Finance,smb,starter,2023-12-09,"Surat, Gujarat, India",Email Campaign,0,
+ORI350-00309,Neha Gupta,neha.gupta.ori350.309@example.com,Sahyadri Retail,Logistics,smb,growth,2026-02-03,"Bhopal, Madhya Pradesh, India",Website,0,
+ORI350-00310,Aditya Khan,aditya.khan.ori350.310@example.com,Pragati Learning,Retail,mid_market,growth,2026-04-17,"Chandigarh, Chandigarh, India",Sales Team,0,
+ORI350-00311,Yash Sharma,yash.sharma.ori350.311@example.com,Triveni Solutions,Media,startup,growth,2025-01-18,"Pune, Maharashtra, India",Mobile App,0,
+ORI350-00312,Diya Mukherjee,diya.mukherjee.ori350.312@example.com,BlueKite Systems,Media,mid_market,starter,2024-12-23,"Jaipur, Rajasthan, India",Sales Team,0,
+ORI350-00313,Ishaan More,ishaan.more.ori350.313@example.com,Cedar Finance,Media,mid_market,enterprise,2021-08-24,"Bengaluru, Karnataka, India",Website,1,2026-09-22
+ORI350-00314,Myra Chawla,myra.chawla.ori350.314@example.com,MangoTree Services,Healthcare,smb,growth,2024-03-23,"Coimbatore, Tamil Nadu, India",Website,0,
+ORI350-00315,Saanvi Shetty,saanvi.shetty.ori350.315@example.com,Lotus Health Network,Media,startup,growth,2026-07-12,"Visakhapatnam, Andhra Pradesh, India",Sales Team,1,2025-08-20
+ORI350-00316,Meera Chawla,meera.chawla.ori350.316@example.com,Aarohan Digital,Technology,mid_market,growth,2026-07-16,"Chennai, Tamil Nadu, India",Sales Team,0,
+ORI350-00317,Ishaan Joshi,ishaan.joshi.ori350.317@example.com,Kaveri Commerce,Retail,startup,starter,2025-03-28,"Nashik, Maharashtra, India",LinkedIn,0,
+ORI350-00318,Rohan Pillai,rohan.pillai.ori350.318@example.com,Cedar Finance,Education,enterprise,enterprise,2022-08-11,"Lucknow, Uttar Pradesh, India",Referral,1,2025-05-31
+ORI350-00319,Nandini Banerjee,nandini.banerjee.ori350.319@example.com,Monsoon Media,Media,smb,starter,2024-10-27,"Bhopal, Madhya Pradesh, India",Partner,0,
+ORI350-00320,Ira More,ira.more.ori350.320@example.com,Aarohan Digital,Manufacturing,mid_market,growth,2024-07-17,"Indore, Madhya Pradesh, India",Partner,0,
+ORI350-00321,Atharv Singh,atharv.singh.ori350.321@example.com,Cedar Finance,Media,startup,starter,2026-05-20,"Chandigarh, Chandigarh, India",Mobile App,1,2025-06-30
+ORI350-00322,Saanvi Thakur,saanvi.thakur.ori350.322@example.com,Vistaar Consulting,Finance,smb,starter,2026-09-22,"Coimbatore, Tamil Nadu, India",LinkedIn,1,2026-09-05
+ORI350-00323,Rohan Fernandes,rohan.fernandes.ori350.323@example.com,Monsoon Media,Education,smb,growth,2025-05-09,"Bengaluru, Karnataka, India",Website,0,
+ORI350-00324,Sai Singh,sai.singh.ori350.324@example.com,Narmada Manufacturing,Education,smb,enterprise,2023-03-11,"Noida, Uttar Pradesh, India",Mobile App,0,
+ORI350-00325,Sai Chopra,sai.chopra.ori350.325@example.com,Aarohan Digital,Retail,smb,enterprise,2023-07-25,"Mumbai, Maharashtra, India",LinkedIn,0,
+ORI350-00326,Ira Bansal,ira.bansal.ori350.326@example.com,Sahyadri Retail,Technology,smb,growth,2021-12-13,"Nagpur, Maharashtra, India",LinkedIn,0,
+ORI350-00327,Riya Deshmukh,riya.deshmukh.ori350.327@example.com,Bharat Cloudworks,Media,enterprise,growth,2023-11-05,"Ahmedabad, Gujarat, India",LinkedIn,0,
+ORI350-00328,Advait Pawar,advait.pawar.ori350.328@example.com,Pioneer Infotech,Media,smb,growth,2023-03-12,"Chennai, Tamil Nadu, India",Email Campaign,0,
+ORI350-00329,Tanvi Kapoor,tanvi.kapoor.ori350.329@example.com,Lotus Health Network,Media,smb,starter,2022-03-16,"Pune, Maharashtra, India",Partner,0,
+ORI350-00330,Krishna Joshi,krishna.joshi.ori350.330@example.com,MangoTree Services,Finance,enterprise,growth,2024-10-25,"Bengaluru, Karnataka, India",Website,0,
+ORI350-00331,Atharv Kulkarni,atharv.kulkarni.ori350.331@example.com,CoralBridge Networks,Retail,enterprise,growth,2026-08-22,"Visakhapatnam, Andhra Pradesh, India",Website,1,2026-08-21
+ORI350-00332,Ayaan Chawla,ayaan.chawla.ori350.332@example.com,Nexa Bharat,Healthcare,enterprise,growth,2025-11-03,"Delhi, Delhi, India",Sales Team,0,
+ORI350-00333,Arjun Pillai,arjun.pillai.ori350.333@example.com,Pragati Learning,Technology,smb,starter,2025-05-03,"Bhopal, Madhya Pradesh, India",Website,0,
+ORI350-00334,Tanvi Kaur,tanvi.kaur.ori350.334@example.com,Narmada Manufacturing,Healthcare,smb,starter,2022-04-20,"Nagpur, Maharashtra, India",LinkedIn,0,
+ORI350-00335,Aadhya Khan,aadhya.khan.ori350.335@example.com,Narmada Manufacturing,Media,mid_market,growth,2024-01-05,"Lucknow, Uttar Pradesh, India",Email Campaign,0,
+ORI350-00336,Sneha Chopra,sneha.chopra.ori350.336@example.com,Lotus Health Network,Media,mid_market,growth,2021-09-21,"Kochi, Kerala, India",Email Campaign,1,2026-08-20
+ORI350-00337,Riya Khan,riya.khan.ori350.337@example.com,Sahyadri Retail,Finance,mid_market,growth,2024-11-14,"Jaipur, Rajasthan, India",Partner,0,
+ORI350-00338,Prisha Kaur,prisha.kaur.ori350.338@example.com,Lotus Health Network,Technology,smb,growth,2025-02-08,"Nashik, Maharashtra, India",Mobile App,1,2026-04-21
+ORI350-00339,Meera Menon,meera.menon.ori350.339@example.com,Triveni Solutions,Education,smb,growth,2023-01-03,"Pune, Maharashtra, India",LinkedIn,0,
+ORI350-00340,Reyansh Joshi,reyansh.joshi.ori350.340@example.com,Narmada Manufacturing,Media,smb,growth,2021-02-17,"Kolkata, West Bengal, India",LinkedIn,1,2026-06-30
+ORI350-00341,Ishaan Gupta,ishaan.gupta.ori350.341@example.com,Kaveri Commerce,Media,smb,growth,2022-03-26,"Noida, Uttar Pradesh, India",Sales Team,0,
+ORI350-00342,Saanvi Ansari,saanvi.ansari.ori350.342@example.com,Pioneer Infotech,Media,smb,growth,2021-07-12,"Bengaluru, Karnataka, India",Email Campaign,0,
+ORI350-00343,Atharv Shaikh,atharv.shaikh.ori350.343@example.com,Aarohan Digital,Media,smb,growth,2021-12-21,"Mumbai, Maharashtra, India",Sales Team,0,
+ORI350-00344,Siddharth Jadhav,siddharth.jadhav.ori350.344@example.com,Monsoon Media,Retail,mid_market,growth,2025-03-20,"Visakhapatnam, Andhra Pradesh, India",Website,0,
+ORI350-00345,Nandini Banerjee,nandini.banerjee.ori350.345@example.com,Deccan Logistics,Manufacturing,startup,starter,2021-04-30,"Indore, Madhya Pradesh, India",Website,1,2026-08-29
+ORI350-00346,Diya Shah,diya.shah.ori350.346@example.com,Cedar Finance,Media,mid_market,starter,2025-03-28,"Chandigarh, Chandigarh, India",Email Campaign,0,
+ORI350-00347,Avni Naidu,avni.naidu.ori350.347@example.com,Asterline Systems,Retail,mid_market,starter,2021-07-14,"Mumbai, Maharashtra, India",Mobile App,0,
+ORI350-00348,Meera Banerjee,meera.banerjee.ori350.348@example.com,Kaveri Commerce,Retail,enterprise,growth,2023-04-17,"Jaipur, Rajasthan, India",LinkedIn,0,
+ORI350-00349,Tanvi Singh,tanvi.singh.ori350.349@example.com,Asterline Systems,Media,mid_market,starter,2024-06-11,"Delhi, Delhi, India",Referral,0,
+ORI350-00350,Aarav Mehta,aarav.mehta.ori350.350@example.com,Sahyadri Retail,Manufacturing,mid_market,growth,2025-11-06,"Jaipur, Rajasthan, India",Referral,0,

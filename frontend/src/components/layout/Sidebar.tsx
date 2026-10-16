@@ -1,0 +1,142 @@
+import { NavLink, useNavigate } from 'react-router-dom';
+import {
+  LayoutDashboard,
+  Users,
+  PieChart,
+  TrendingDown,
+  MessageCircle,
+  Lightbulb,
+  ShieldCheck,
+  Sparkles,
+  Building2,
+  ArrowLeftRight,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { useActiveWorkspace } from '../../contexts/workspaceContextValue';
+
+interface NavItem {
+  name: string;
+  path: string;
+  icon: LucideIcon;
+}
+
+const navigation: NavItem[] = [
+  { name: 'Overview', path: '/', icon: LayoutDashboard },
+  { name: 'Customer 360', path: '/customers', icon: Users },
+  { name: 'Segments', path: '/segments', icon: PieChart },
+  { name: 'Churn & Retention', path: '/churn', icon: TrendingDown },
+  { name: 'Sentiment & Support', path: '/sentiment', icon: MessageCircle },
+  { name: 'Recommendations', path: '/recommendations', icon: Lightbulb },
+  { name: 'Agent Audit', path: '/agents', icon: ShieldCheck },
+  { name: 'Ask Orion', path: '/ask', icon: Sparkles },
+];
+
+export default function Sidebar({ disabled = false }: { disabled?: boolean }) {
+  const { activeWorkspace, clearWorkspace } = useActiveWorkspace();
+  const navigate = useNavigate();
+
+  function handleSwitch() {
+    clearWorkspace();
+    navigate('/workspaces');
+  }
+
+  return (
+    <aside className="glass-surface flex w-full flex-shrink-0 flex-col border-b border-white/[0.06] md:h-screen md:w-60 md:border-b-0 md:border-r">
+      {/* Logo */}
+      <div className="flex h-14 items-center gap-2.5 border-b border-white/[0.06] px-4 sm:px-5">
+        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--color-primary-400)] to-[var(--color-primary-600)] shadow-[0_0_12px_rgba(99,102,241,0.3)]">
+          <LayoutDashboard className="h-3.5 w-3.5 text-white" />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-[13px] font-bold tracking-tight text-white">Orion</span>
+          <span className="text-[9px] font-semibold uppercase tracking-[0.15em] text-[var(--color-text-accent)]">Customer Intelligence</span>
+        </div>
+      </div>
+
+      {/* Workspace indicator */}
+      {activeWorkspace && (
+        <div className="mx-3 mt-3 mb-1">
+          <div className="glass-nested rounded-lg px-3 py-2.5">
+            <div className="flex items-center gap-2">
+              <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-md bg-primary-400/15">
+                <Building2 className="h-3.5 w-3.5 text-[var(--color-primary-400)]" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-[12px] font-semibold text-white">
+                  {activeWorkspace.company_name}
+                </p>
+                <div className="flex items-center gap-1.5">
+                  <span className="rounded-full bg-primary-400/10 px-1.5 py-0.5 text-[9px] font-medium capitalize text-[var(--color-text-accent)]">
+                    {activeWorkspace.industry}
+                  </span>
+                  <span className="font-mono text-[9px] text-[var(--color-text-tertiary)]">
+                    {activeWorkspace.customer_count.toLocaleString()} customers
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleSwitch}
+              className="mt-2 flex w-full items-center justify-center gap-1.5 rounded-md bg-white/5 py-1.5 text-[10px] font-medium text-[var(--color-text-tertiary)] transition-colors hover:bg-white/[0.07] hover:text-[var(--color-text-secondary)]"
+            >
+              <ArrowLeftRight className="h-3 w-3" />
+              Switch workspace
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Navigation */}
+      <nav
+        aria-label="Primary"
+        className={`flex gap-1 overflow-x-auto px-3 py-3 md:flex-1 md:flex-col md:space-y-0.5 md:overflow-visible md:py-0 md:pt-4 ${disabled ? 'pointer-events-none opacity-30' : ''}`}
+      >
+        {navigation.map((item) => {
+          const Icon = item.icon;
+          return (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === '/'}
+              className={({ isActive }) =>
+                `group flex shrink-0 items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-2 text-[13px] font-medium transition-all duration-200 md:shrink md:whitespace-normal ${
+                  isActive
+                    ? 'bg-primary-400/15 text-white shadow-[inset_0_0_0_1px_rgba(129,140,248,0.15),0_0_12px_rgba(129,140,248,0.06)]'
+                    : 'text-[var(--color-text-tertiary)] hover:bg-white/5 hover:text-white/80'
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <Icon
+                    className={`h-4 w-4 flex-shrink-0 transition-colors duration-200 ${
+                      isActive
+                        ? 'text-[var(--color-primary-400)]'
+                        : 'text-[var(--color-text-tertiary)] group-hover:text-[var(--color-text-secondary)]'
+                    }`}
+                    strokeWidth={isActive ? 2 : 1.5}
+                  />
+                  {item.name}
+                </>
+              )}
+            </NavLink>
+          );
+        })}
+      </nav>
+
+      {/* Footer */}
+      <div className="hidden border-t border-white/[0.06] px-5 py-3 md:block">
+        <div className="flex items-center gap-2">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--color-success)] opacity-50" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[var(--color-success)]" />
+          </span>
+          <p className="text-[10px] font-medium text-[var(--color-text-tertiary)]">
+            System ready
+          </p>
+        </div>
+      </div>
+    </aside>
+  );
+}

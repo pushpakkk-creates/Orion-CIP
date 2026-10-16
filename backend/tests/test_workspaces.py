@@ -1,0 +1,473 @@
+"""Smoke tests for workspace CRUD lifecycle."""
+
+import pytest
+from sqlalchemy import create_engine, inspect, text
+from sqlalchemy.exc import OperationalError
+from sqlalchemy.orm import sessionmaker
+
+from app.config import settings
+
+
+ADMIN_HEADERS = {"X-Admin-Token": "test-admin-token"}
+
+
+def test_init_metadata_db_migrates_legacy_workspace_columns(tmp_path, monkeypatch):
+    import app.db.workspace_db as workspace_db
+    import app.services.workspace_manager as workspace_manager
+
+    metadata_path = tmp_path / "legacy_workspaces.db"
+    workspaces_dir = tmp_path / "workspaces"
+    engine = create_engine(f"sqlite:///{metadata_path}")
+    Session = sessionmaker(bind=engine)
+
+    with engine.begin() as conn:
+        conn.execute(text("""
+            CREATE TABLE workspaces (
+                id VARCHAR PRIMARY KEY,
+                name VARCHAR NOT NULL,
+                company_name VARCHAR NOT NULL,
+                scenario VARCHAR NOT NULL,
+                industry VARCHAR NOT NULL,
+                customer_count INTEGER NOT NULL,
+                status VARCHAR NOT NULL,
+                created_at DATETIME NOT NULL
+            )
+        """))
+
+    monkeypatch.setattr(workspace_db, "WORKSPACES_DIR", workspaces_dir)
+    monkeypatch.setattr(workspace_db, "METADATA_DB_PATH", metadata_path)
+    monkeypatch.setattr(workspace_db, "metadata_engine", engine)
+    monkeypatch.setattr(workspace_db, "MetadataSession", Session)
+
+    workspace_manager.init_metadata_db()
+
+    columns = {column["name"] for column in inspect(engine).get_columns("workspaces")}
+    assert {
+        "current_stage",
+        "source",
+        "stage_index",
+        "total_stages",
+        "completed_at",
+        "generation_started_at",
+        "seed",
+        "config_json",
+        "access_token_hash",
+        "error_message",
+        "pipeline_warnings",
+    }.issubset(columns)
+
+    ws = workspace_manager.create_workspace(
+        name="Synthetic Workspace",
+        scenario="random",
+    )
+
+    assert ws.id
+    assert workspace_manager.list_workspaces()[0].id == ws.id
+
+
+@pytest.mark.asyncio
+async def test_workspace_list_requires_admin_token(client):
+    resp = await client.get("/api/workspaces")
+    assert resp.status_code == 401
+    assert resp.json()["detail"] == "Admin token required"
+
+
+@pytest.mark.asyncio
+async def test_workspace_list_rejects_invalid_admin_token(client):
+    resp = await client.get(
+        "/api/workspaces",
+        headers={"X-Admin-Token": "wrong-token"},
+    )
+    assert resp.status_code == 403
+    assert resp.json()["detail"] == "Invalid admin token"
+
+
+@pytest.mark.asyncio
+async def test_create_workspace_returns_one_time_access_token(client):
+    resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Token Test",
+        "scenario": "velocity_saas",
+    })
+    assert resp.status_code == 201
+    body = resp.json()
+    assert len(body["access_token"]) >= 43
+
+    list_resp = await client.get("/api/workspaces", headers=ADMIN_HEADERS)
+    assert list_resp.status_code == 200
+    listed = list_resp.json()["workspaces"][0]
+    assert "access_token" not in listed
+
+
+@pytest.mark.asyncio
+async def test_public_synthetic_workspace_starts_without_admin_token(client, monkeypatch):
+    import app.services.workspace_generator as generator
+    import app.services.workspace_manager as workspace_manager
+    from app.services.workspace_manager import delete_workspace
+
+    monkeypatch.setattr(settings, "public_synthetic_access", True, raising=False)
+
+    def no_op_generation(_workspace_id: str):
+        return None
+
+    def random_scenario():
+        return {
+            "company_name": "Pulse Labs",
+            "industry": "Media",
+            "customer_count": 800,
+            "churn_rate": 0.19,
+            "include_outage": False,
+            "profile": "churn_crisis",
+            "seed": 4242,
+        }
+
+    monkeypatch.setattr(generator, "_run_generation", no_op_generation)
+    monkeypatch.setattr(workspace_manager, "generate_random_scenario", random_scenario)
+
+    resp = await client.post("/api/workspaces/synthetic")
+    assert resp.status_code == 201
+    body = resp.json()
+    assert body["name"] == "Synthetic Workspace"
+    assert body["scenario"] == "random"
+    assert body["company_name"] == "Pulse Labs"
+    assert body["industry"] == "Media"
+    assert body["customer_count"] == 800
+    assert body["status"] == "generating"
+    assert len(body["access_token"]) >= 43
+
+    delete_workspace(body["id"])
+
+
+@pytest.mark.asyncio
+async def test_owner_workspace_list_hides_demo_workspaces_but_keeps_owner_workspaces(
+    client,
+    monkeypatch,
+):
+    import app.services.workspace_generator as generator
+    import app.services.workspace_manager as workspace_manager
+
+    monkeypatch.setattr(settings, "public_synthetic_access", True, raising=False)
+
+    def no_op_generation(_workspace_id: str):
+        return None
+
+    monkeypatch.setattr(generator, "_run_generation", no_op_generation)
+
+    demo_resp = await client.post("/api/workspaces/synthetic")
+    assert demo_resp.status_code == 201
+
+    owner_resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Owner First Workspace",
+        "scenario": "velocity_saas",
+    })
+    assert owner_resp.status_code == 201
+    owner_workspace = owner_resp.json()
+
+    list_resp = await client.get("/api/workspaces", headers=ADMIN_HEADERS)
+    assert list_resp.status_code == 200
+    body = list_resp.json()
+    assert body["total"] == 1
+    assert [ws["id"] for ws in body["workspaces"]] == [owner_workspace["id"]]
+
+    saved_again = await client.get("/api/workspaces", headers=ADMIN_HEADERS)
+    assert saved_again.status_code == 200
+    assert [ws["id"] for ws in saved_again.json()["workspaces"]] == [
+        owner_workspace["id"]
+    ]
+
+    for ws in workspace_manager.list_all_workspace_records():
+        workspace_manager.delete_workspace(ws.id)
+
+
+@pytest.mark.asyncio
+async def test_public_synthetic_workspace_reports_full_data_volume(client, monkeypatch):
+    import sqlite3
+
+    import app.routes.workspaces as workspace_routes
+
+    monkeypatch.setattr(settings, "public_synthetic_access", True, raising=False)
+
+    def raise_disk_full(*_args, **_kwargs):
+        raise OperationalError(
+            "INSERT INTO workspaces",
+            {},
+            sqlite3.OperationalError("database or disk is full"),
+        )
+
+    monkeypatch.setattr(workspace_routes, "create_workspace", raise_disk_full)
+
+    resp = await client.post("/api/workspaces/synthetic")
+
+    assert resp.status_code == 507
+    assert resp.json()["detail"] == (
+        "The data volume is full. Free storage or increase the Railway "
+        "volume size, then try again."
+    )
+
+
+@pytest.mark.asyncio
+async def test_public_synthetic_workspace_can_be_disabled(client, monkeypatch):
+    monkeypatch.setattr(settings, "public_synthetic_access", False, raising=False)
+
+    resp = await client.post("/api/workspaces/synthetic")
+
+    assert resp.status_code == 403
+    assert resp.json()["detail"] == "Synthetic workspace access is disabled."
+
+
+@pytest.mark.asyncio
+async def test_admin_can_rotate_workspace_access_token(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Rotate Token Test",
+        "scenario": "velocity_saas",
+    })
+    ws_id = create.json()["id"]
+    old_token = create.json()["access_token"]
+
+    rotate = await client.post(
+        f"/api/workspaces/{ws_id}/access-token",
+        headers=ADMIN_HEADERS,
+    )
+    assert rotate.status_code == 200
+    body = rotate.json()
+    assert body["workspace_id"] == ws_id
+    assert len(body["access_token"]) >= 43
+    assert body["access_token"] != old_token
+
+
+@pytest.mark.asyncio
+async def test_dashboard_routes_require_workspace_access_token(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Dashboard Token Test",
+        "scenario": "velocity_saas",
+    })
+    ws_id = create.json()["id"]
+    token = create.json()["access_token"]
+
+    missing = await client.get(
+        "/api/overview/kpis",
+        headers={"X-Workspace-ID": ws_id},
+    )
+    assert missing.status_code == 401
+    assert missing.json()["detail"] == "Workspace token required"
+
+    invalid = await client.get(
+        "/api/overview/kpis",
+        headers={"X-Workspace-ID": ws_id, "X-Workspace-Token": "wrong-token"},
+    )
+    assert invalid.status_code == 403
+    assert invalid.json()["detail"] == "Invalid workspace token"
+
+    authorized = await client.get(
+        "/api/overview/kpis",
+        headers={"X-Workspace-ID": ws_id, "X-Workspace-Token": token},
+    )
+    assert authorized.status_code == 404
+    assert authorized.json()["detail"] == f"Workspace database not found: {ws_id}"
+
+
+@pytest.mark.asyncio
+async def test_list_workspaces_empty(client):
+    resp = await client.get("/api/workspaces", headers=ADMIN_HEADERS)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["total"] == 0
+    assert body["workspaces"] == []
+
+
+@pytest.mark.asyncio
+async def test_create_workspace(client):
+    resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Test WS",
+        "scenario": "velocity_saas",
+    })
+    assert resp.status_code == 201
+    body = resp.json()
+    assert body["name"] == "Test WS"
+    assert body["company_name"] == "Velocity SaaS"
+    assert body["status"] == "created"
+    assert body["industry"] == "Technology"
+    assert body["customer_count"] == 1000
+    assert "id" in body
+
+
+@pytest.mark.asyncio
+async def test_create_workspace_enforces_workspace_quota(client, monkeypatch):
+    monkeypatch.setattr(settings, "max_workspaces", 1, raising=False)
+
+    first = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Quota One",
+        "scenario": "velocity_saas",
+    })
+    assert first.status_code == 201
+
+    second = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Quota Two",
+        "scenario": "velocity_saas",
+    })
+    assert second.status_code == 409
+    assert second.json()["detail"] == "Workspace limit reached."
+
+
+@pytest.mark.asyncio
+async def test_get_workspace_by_id(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Fetch Test",
+        "scenario": "atlas_enterprise",
+    })
+    ws_id = create.json()["id"]
+
+    resp = await client.get(f"/api/workspaces/{ws_id}", headers=ADMIN_HEADERS)
+    assert resp.status_code == 200
+    assert resp.json()["name"] == "Fetch Test"
+    assert resp.json()["company_name"] == "Atlas Enterprise"
+
+
+@pytest.mark.asyncio
+async def test_get_workspace_by_id_allows_workspace_token(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Workspace Token Fetch",
+        "scenario": "atlas_enterprise",
+    })
+    body = create.json()
+
+    resp = await client.get(
+        f"/api/workspaces/{body['id']}",
+        headers={
+            "X-Workspace-ID": body["id"],
+            "X-Workspace-Token": body["access_token"],
+        },
+    )
+    assert resp.status_code == 200
+    assert resp.json()["name"] == "Workspace Token Fetch"
+
+
+@pytest.mark.asyncio
+async def test_get_workspace_not_found(client):
+    resp = await client.get("/api/workspaces/nonexistent123", headers=ADMIN_HEADERS)
+    assert resp.status_code == 404
+
+
+@pytest.mark.asyncio
+async def test_delete_workspace(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Delete Me",
+        "scenario": "meridian_data",
+    })
+    ws_id = create.json()["id"]
+
+    resp = await client.delete(f"/api/workspaces/{ws_id}", headers=ADMIN_HEADERS)
+    assert resp.status_code == 204
+
+    check = await client.get(f"/api/workspaces/{ws_id}", headers=ADMIN_HEADERS)
+    assert check.status_code == 404
+
+
+@pytest.mark.asyncio
+async def test_create_workspace_random_scenario(client):
+    resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Random Test",
+        "scenario": "random",
+    })
+    assert resp.status_code == 201
+    body = resp.json()
+    assert body["company_name"] != "Random Test"
+    assert body["customer_count"] >= 100
+    assert len(body["industry"]) > 0
+
+
+@pytest.mark.asyncio
+async def test_create_workspace_rejects_unknown_scenario(client):
+    resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Typo Test",
+        "scenario": "velocitty_saas",
+    })
+    assert resp.status_code == 422
+
+
+@pytest.mark.asyncio
+async def test_create_workspace_rejects_blank_name(client):
+    resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "   ",
+        "scenario": "velocity_saas",
+    })
+    assert resp.status_code == 422
+
+
+@pytest.mark.asyncio
+async def test_create_workspace_trims_name(client):
+    resp = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "  Trimmed WS  ",
+        "scenario": "velocity_saas",
+    })
+    assert resp.status_code == 201
+    assert resp.json()["name"] == "Trimmed WS"
+
+
+@pytest.mark.asyncio
+async def test_regeneration_clears_stale_completion_state(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Regenerate Test",
+        "scenario": "velocity_saas",
+    })
+    ws_id = create.json()["id"]
+
+    from app.services.workspace_manager import get_workspace, update_workspace_status
+
+    update_workspace_status(ws_id, "ready", error_message="old failure")
+    ready = get_workspace(ws_id)
+    assert ready.completed_at is not None
+    assert ready.error_message is None
+
+    update_workspace_status(ws_id, "generating", error_message="")
+    generating = get_workspace(ws_id)
+    assert generating.completed_at is None
+    assert generating.error_message == ""
+    assert generating.generation_started_at is not None
+
+
+@pytest.mark.asyncio
+async def test_datetime_fields_serialize_as_utc(client):
+    """Naive UTC datetimes must serialize with an explicit UTC marker so the
+    browser does not reinterpret them as local time (the '60m elapsed' bug)."""
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Timezone Test",
+        "scenario": "velocity_saas",
+    })
+    ws_id = create.json()["id"]
+
+    from app.services.workspace_manager import update_workspace_status
+
+    update_workspace_status(ws_id, "generating")
+
+    resp = await client.get(f"/api/workspaces/{ws_id}", headers=ADMIN_HEADERS)
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["created_at"].endswith("Z"), body["created_at"]
+    assert body["generation_started_at"].endswith("Z"), body["generation_started_at"]
+
+
+@pytest.mark.asyncio
+async def test_dashboard_routes_reject_invalid_workspace_header(client):
+    resp = await client.get(
+        "/api/overview/kpis",
+        headers={"X-Workspace-ID": "../../nexus"},
+    )
+    assert resp.status_code == 400
+    assert resp.json()["detail"] == "Invalid workspace ID"
+
+
+@pytest.mark.asyncio
+async def test_dashboard_routes_404_for_missing_workspace_database(client):
+    create = await client.post("/api/workspaces", headers=ADMIN_HEADERS, json={
+        "name": "Missing DB Test",
+        "scenario": "velocity_saas",
+    })
+    ws_id = create.json()["id"]
+    resp = await client.get(
+        "/api/overview/kpis",
+        headers={
+            "X-Workspace-ID": ws_id,
+            "X-Workspace-Token": create.json()["access_token"],
+        },
+    )
+    assert resp.status_code == 404

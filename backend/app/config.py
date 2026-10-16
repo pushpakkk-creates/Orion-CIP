@@ -1,0 +1,29 @@
+import os
+
+from pydantic_settings import BaseSettings
+
+
+class Settings(BaseSettings):
+    admin_api_token: str = ""
+    groq_api_key: str = ""
+    groq_model: str = "openai/gpt-oss-120b"
+    anthropic_api_key: str = ""
+    openai_api_key: str = ""
+    database_url: str = "sqlite:///data/orion.db"
+    app_env: str = "development"
+    log_level: str = "INFO"
+    max_workspaces: int = 25
+    max_demo_workspaces: int = 25
+    max_concurrent_generations: int = 1
+    public_synthetic_access: bool = True
+    min_data_volume_free_bytes: int = 64 * 1024 * 1024
+
+    model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
+
+
+settings = Settings()
+
+
+def get_admin_api_token() -> str:
+    """Return the configured admin token, accepting the legacy ADMIN_TOKEN alias."""
+    return settings.admin_api_token or os.getenv("ADMIN_TOKEN", "")

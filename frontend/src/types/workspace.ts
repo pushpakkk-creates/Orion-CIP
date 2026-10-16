@@ -1,0 +1,62 @@
+export interface Workspace {
+  id: string;
+  name: string;
+  company_name: string;
+  scenario: string;
+  industry: string;
+  customer_count: number;
+  status: 'created' | 'generating' | 'ready' | 'failed';
+  current_stage: string | null;
+  stage_index: number | null;
+  total_stages: number | null;
+  created_at: string;
+  completed_at: string | null;
+  generation_started_at: string | null;
+  error_message: string | null;
+  user_message: string | null;
+  pipeline_warnings: string | null;
+  health: 'ok' | 'degraded';
+  access_token?: string;
+}
+
+export interface WorkspaceListResponse {
+  workspaces: Workspace[];
+  total: number;
+}
+
+export interface Scenario {
+  key: string;
+  company_name: string;
+  industry: string;
+  customer_count: number;
+  description: string;
+  churn_rate: number;
+  profile: string;
+}
+
+export interface CreateWorkspaceInput {
+  name: string;
+  scenario: string;
+  industry?: string;
+  customer_count?: number;
+  seed?: number;
+  churn_rate?: number;
+  include_outage?: boolean;
+  scenario_description?: string;
+}
+
+export interface WorkspaceAccessTokenResponse {
+  workspace_id: string;
+  access_token: string;
+}
+
+export type OwnerAccessMode =
+  | 'deployment_token'
+  | 'owner_passcode'
+  | 'setup_required';
+
+export interface OwnerAccessStatus {
+  mode: OwnerAccessMode;
+  setup_required: boolean;
+  owner_access_enabled: boolean;
+}
